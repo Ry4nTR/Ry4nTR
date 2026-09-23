@@ -38,7 +38,8 @@
       "platform": "Browser",
       "tech": ["Three.js", "TypeScript"],
       "media": {
-        "thumbnail": "assets/thumbnail/3DConfigurator.png"
+        "thumbnail": "assets/thumbnail/3DConfigurator.png",
+        "video": "assets/videos/3d_configurator_clip.mp4"
       },
       "links": []
     },
