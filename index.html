@@ -4,578 +4,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rostyslav Terletskyy - Game Programmer</title>
+    <meta name="theme-color" content="#1a1a1f">
 
-    <!-- Font Awesome icon library (used throughout for icons) -->
+    <!-- Static fallbacks: replaced at runtime with the values in locales/*.json -->
+    <title>Rostyslav Terletskyy — Programmer</title>
+    <meta name="description" content="Portfolio of Rostyslav Terletskyy, a junior programmer working across game development and web development.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rostyslav Terletskyy — Programmer">
+    <meta property="og:description" content="Portfolio of Rostyslav Terletskyy, a junior programmer working across game development and web development.">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1a1f'/%3E%3Cpath d='M24 20 12 32l12 12M40 20l12 12-12 12' fill='none' stroke='%23a855f7' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+    <!-- Icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Styles: main.css only @imports the other CSS files -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- EmailJS SDK (used by js/sections/contact.js) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- App entry point (ES modules) -->
+    <script type="module" src="js/main.js"></script>
 </head>
 
-<body>
+<body class="is-loading">
 
-<!-- =========================================
-     1. NAVIGATION
-     ========================================= -->
-<nav>
-    <div class="container">
-        <!-- Brand logo / identity -->
-        <div class="logo">&lt;/Game Programmer&gt;</div>
-
-        <!-- Hamburger button shown on mobile (toggled via JS) -->
-        <button class="mobile-menu-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <ul class="nav-links">
-            <!-- Main navigation links — data-translate keys map to the translations object in script.js -->
-            <li><a href="#home" data-translate="nav_home">Home</a></li>
-            <li><a href="#about" data-translate="nav_about">About</a></li>
-            <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
-            <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
-
-            <!-- Language switcher dropdown -->
-            <li class="lang-dropdown">
-                <button class="lang-dropbtn">
-                    <i class="fas fa-globe"></i>
-                    <!-- Current language label updated dynamically by JS -->
-                    <span id="current-lang-text">EN</span>
-                    <i class="fas fa-chevron-down ms-1"></i>
-                </button>
-                <!-- Dropdown options — data-lang triggers the language switch in script.js -->
-                <div class="lang-dropdown-content">
-                    <a href="#" data-lang="en">🇬🇧 English</a>
-                    <a href="#" data-lang="it">🇮🇹 Italiano</a>
-                </div>
-            </li>
-        </ul>
+    <!-- Only visible if the app fails to start: JS disabled, blocked, or index.html opened straight from disk -->
+    <div class="boot-error" role="alert">
+        <p>
+            <strong>The site could not load.</strong><br>
+            Please enable JavaScript. If you opened this file directly from your computer, serve the folder
+            with a local web server instead (for example the VS Code "Live Server" extension).
+            The browser console (F12) shows the exact error.
+        </p>
     </div>
-</nav>
+
+    <!-- Background particles (filled by js/effects/particles.js) -->
+    <div class="particles" aria-hidden="true"></div>
 
 
-<!-- =========================================
-     2. HERO SECTION
-     ========================================= -->
-<section id="home" class="hero">
-    <div class="container">
-        <div class="hero-content">
+    <!-- =========================================
+         NAVIGATION
+         ========================================= -->
+    <nav class="navbar" aria-label="Main">
+        <div class="container navbar__inner">
+            <a href="#home" class="navbar__logo">&lt;/Programmer&gt;</a>
 
-            <!-- Typing animation container: JS writes into .typing-text character by character -->
-            <div class="typing-container">
-                <h1>Rostyslav Terletskyy</h1>
-                <div class="subtitle">
-                    <span class="typing-text"></span>
-                    <!-- Blinking cursor synced with the typing animation -->
-                    <span class="cursor">|</span>
-                </div>
-            </div>
+            <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-links"
+                    data-i18n-attr="aria-label:nav.menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
 
-            <!-- Short bio paragraph — translatable -->
-            <p class="description" data-translate="hero_desc">
-                Game programmer with experience in Unity and Unreal Engine. I enjoy solving technical challenges,
-                optimizing performance, and collaborating with teams to build engaging games. Always learning and
-                adapting to new technologies.
-            </p>
-
-            <!-- CTA buttons row -->
-            <div class="hero-buttons">
-                <!-- Scroll to projects section -->
-                <a href="#projects" class="cta-button primary" data-translate="btn_view_work">View My Work</a>
-
-                <!-- Resume download dropdown (two language versions) -->
-                <div class="resume-dropdown">
-                    <button class="cta-button secondary dropdown-toggle">
-                        <i class="fas fa-download"></i> <span data-translate="btn_resume">Download Resume</span> <i class="fas fa-chevron-down ms-1"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="assets/CV GameProgrammer ENG.pdf" download="CV GameProgrammer ENG.pdf">
-                            🇬🇧 English
-                        </a>
-                        <a href="assets/CV GameProgrammer ITA.pdf" download="CV GameProgrammer ITA.pdf">
-                            🇮🇹 Italiano
-                        </a>
-                    </div>
-                </div>
-
-                <!-- External profile icon buttons -->
-                <a href="https://github.com/Ry4nTR" target="_blank" class="icon-button" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://ry4ntr.itch.io/" target="_blank" class="icon-button" title="Itch.io">
-                    <i class="fab fa-itch-io"></i>
-                </a>
-            </div>
-
-            <!-- Stats row — data-count values are animated by animateCounters() in script.js -->
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number" data-count="4">0</div>
-                    <div class="stat-label" data-translate="stat_projects">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="3">0</div>
-                    <div class="stat-label" data-translate="stat_exp">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="5">0</div>
-                    <div class="stat-label" data-translate="stat_tech">Technologies Mastered</div>
-                </div>
-            </div>
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="#home" class="navbar__link" data-i18n="nav.home"></a></li>
+                <li><a href="#about" class="navbar__link" data-i18n="nav.about"></a></li>
+                <li><a href="#skills" class="navbar__link" data-i18n="nav.skills"></a></li>
+                <li><a href="#projects" class="navbar__link" data-i18n="nav.projects"></a></li>
+                <li><a href="#contact" class="navbar__link" data-i18n="nav.contact"></a></li>
+                <!-- Language dropdown is built by js/sections/language-switcher.js -->
+                <li class="navbar__lang" id="lang-switcher"></li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- Right side: video reel + decorative code block -->
-        <div class="hero-visual">
 
-            <!-- Video reel — JS cycles between .reel-video elements every 6 seconds -->
-            <div class="video-reel-container">
-                <!-- First video starts as active (visible) -->
-                <video class="reel-video active" muted loop playsinline preload="auto">
-                    <source src="assets/videos/synced_rush_clip.mp4" type="video/mp4">
-                </video>
-                <!-- Second video starts hidden, fades in on rotation -->
-                <video class="reel-video" muted loop playsinline preload="auto">
-                    <source src="assets/videos/alpha_exilemet_clip.mp4" type="video/mp4">
-                </video>
+    <main>
+
+        <!-- =========================================
+             HERO
+             ========================================= -->
+        <section id="home" class="hero">
+            <div class="container hero__grid">
+
+                <div class="hero__content">
+                    <h1 class="hero__name">Rostyslav Terletskyy</h1>
+
+                    <p class="hero__subtitle">
+                        <span class="typing-text" id="typing-text"></span><span class="typing-cursor" aria-hidden="true">|</span>
+                    </p>
+
+                    <p class="hero__description" data-i18n="hero.description"></p>
+
+                    <div class="hero__actions">
+                        <a href="#projects" class="btn btn--primary" data-i18n="hero.viewWork"></a>
+                        <!-- Resume dropdown: built from data/site.json -->
+                        <div class="dropdown" id="resume-dropdown"></div>
+                        <!-- Social icon buttons: built from data/site.json -->
+                        <div class="hero__social" id="hero-social"></div>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <!-- Video reel: built from the projects flagged "inReel" in data/projects.json -->
+                    <div class="reel" id="hero-reel"></div>
+                </div>
+
             </div>
+        </section>
 
-            <!-- Decorative code snippet — each line fades in via CSS animation delays -->
-            <div class="code-animation">
-                <div class="code-line">
-                    <span class="code-keyword">class</span>
-                    <span class="code-class">GameDeveloper</span>
-                    <span class="code-bracket">{</span>
+
+        <!-- =========================================
+             ABOUT
+             ========================================= -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title" data-i18n="about.title"></h2>
                 </div>
-                <div class="code-line indent">
-                    <span class="code-method">createAwesome</span><span class="code-bracket">()</span>
-                    <span class="code-bracket">{</span>
-                </div>
-                <div class="code-line indent2">
-                    <span class="code-keyword">return</span>
-                    <span class="code-string">"Innovation"</span><span class="code-semicolon">;</span>
-                </div>
-                <div class="code-line indent">
-                    <span class="code-bracket">}</span>
-                </div>
-                <div class="code-line">
-                    <span class="code-bracket">}</span>
+
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p class="about-lead" data-i18n="about.lead"></p>
+                        <p data-i18n="about.p1"></p>
+                        <p data-i18n="about.p2"></p>
+
+                        <div class="about-fact">
+                            <i class="fa-solid fa-language" aria-hidden="true"></i>
+                            <span><strong data-i18n="about.languagesLabel"></strong> <span data-i18n="about.languages"></span></span>
+                        </div>
+                    </div>
+
+                    <aside class="about-journey reveal">
+                        <h3 class="about-journey__title">
+                            <i class="fa-solid fa-route" aria-hidden="true"></i>
+                            <span data-i18n="about.journeyTitle"></span>
+                        </h3>
+                        <!-- Built from data/timeline.json -->
+                        <ol class="timeline" id="timeline"></ol>
+                    </aside>
                 </div>
             </div>
+        </section>
+
+
+        <!-- =========================================
+             TECH STACK
+             ========================================= -->
+        <section id="skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title" data-i18n="skills.title"></h2>
+                    <p class="section-subtitle" data-i18n="skills.subtitle"></p>
+                </div>
+
+                <!-- Built from data/skills.json -->
+                <div class="skills-grid reveal" id="skills-grid"></div>
+            </div>
+        </section>
+
+
+        <!-- =========================================
+             PROJECTS
+             ========================================= -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title" data-i18n="projects.title"></h2>
+                    <p class="section-subtitle" data-i18n="projects.subtitle"></p>
+                </div>
+
+                <div class="project-explorer reveal">
+                    <!-- Everything below is built from data/projects.json -->
+                    <div class="tabs" id="project-tabs" data-i18n-attr="aria-label:projects.tabsLabel"></div>
+                    <p class="project-explorer__description" id="project-description"></p>
+                    <div class="project-filter" id="project-filter" hidden></div>
+                    <div class="projects-grid" id="projects-grid" role="tabpanel"></div>
+                    <p class="projects-empty" id="projects-empty" hidden></p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================
+             CONTACT
+             ========================================= -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title" data-i18n="contact.title"></h2>
+                </div>
+
+                <div class="contact__content reveal">
+                    <p class="contact__text" data-i18n="contact.description"></p>
+
+                    <!-- Field names (from_name, reply_to, message) match the EmailJS template variables -->
+                    <form id="contact-form" class="form">
+                        <div class="form__field">
+                            <input type="text" id="name" name="from_name" placeholder=" " autocomplete="name" required>
+                            <label for="name" data-i18n="contact.name"></label>
+                        </div>
+                        <div class="form__field">
+                            <input type="email" id="email" name="reply_to" placeholder=" " autocomplete="email" required>
+                            <label for="email" data-i18n="contact.email"></label>
+                        </div>
+                        <div class="form__field">
+                            <textarea id="message" name="message" placeholder=" " required></textarea>
+                            <label for="message" data-i18n="contact.message"></label>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary form__submit">
+                            <span class="form__submit-label" data-i18n="contact.send"></span>
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+
+                        <p class="form__status" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.rights"></p>
         </div>
-    </div>
-</section>
-
-
-<!-- =========================================
-     3. ABOUT SECTION
-     ========================================= -->
-<section id="about">
-    <div class="container">
-        <h2 class="section-title fade-in" data-translate="about_title">About Me</h2>
-        <div class="about-content fade-in">
-
-            <!-- Left column: bio text and achievement badges -->
-            <div class="about-text">
-                <p data-translate="about_p1">
-                    I am a dedicated Game Programmer with a profound passion for crafting immersive and innovative
-                    digital experiences. My journey in game development has fortified my expertise across various
-                    programming languages and leading game engines, enabling me to translate complex creative
-                    visions into tangible, interactive realities.
-                </p>
-                <p data-translate="about_p2">
-                    I thrive on tackling intricate technical challenges, constantly pushing the boundaries of what's
-                    possible in game performance optimization and the implementation of sophisticated gameplay
-                    mechanics. My approach is characterized by a blend of technical acumen, strategic thinking, and
-                    a natural inclination towards leadership in collaborative team environments.
-                </p>
-
-                <!-- Quick-glance badges summarising key traits -->
-                <div class="achievement-badges">
-                    <div class="badge">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>ITS Student</span>
-                    </div>
-                    <div class="badge">
-                        <i class="fas fa-fire"></i>
-                        <span>UE Passionate</span>
-                    </div>
-                    <div class="badge">
-                        <i class="fas fa-lightbulb"></i>
-                        <span>Problem Solver</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right column: skill bars and engine icons -->
-            <div class="skills">
-
-                <!-- Programming language skill bars — data-skill drives the CSS width animation -->
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <i class="fas fa-code"></i>
-                        <h4>Programming Languages</h4>
-                    </div>
-                    <div class="skill-bars">
-                        <div class="skill-bar"><span>C#</span><div class="progress"><div class="progress-fill" data-skill="75"></div></div></div>
-                        <div class="skill-bar"><span>C++</span><div class="progress"><div class="progress-fill" data-skill="70"></div></div></div>
-                        <div class="skill-bar"><span>Java</span><div class="progress"><div class="progress-fill" data-skill="50"></div></div></div>
-                        <div class="skill-bar"><span>HTML</span><div class="progress"><div class="progress-fill" data-skill="85"></div></div></div>
-                        <div class="skill-bar"><span>CSS</span><div class="progress"><div class="progress-fill" data-skill="70"></div></div></div>
-                        <div class="skill-bar"><span>JavaScript</span><div class="progress"><div class="progress-fill" data-skill="70"></div></div></div>
-                    </div>
-                </div>
-
-                <!-- Game engine icons -->
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <i class="fas fa-gamepad"></i>
-                        <h4>Game Engines</h4>
-                    </div>
-                    <div class="engine-icons">
-                        <div class="engine-item">
-                            <div class="engine-icon"><img src="assets/icons/unity-logo.png" alt="Unity"></div>
-                            <span>Unity</span>
-                        </div>
-                        <div class="engine-item">
-                            <div class="engine-icon"><img src="assets/icons/unreal-logo.png" alt="Unreal"></div>
-                            <span>Unreal</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- =========================================
-     4. PROJECTS SECTION
-     ========================================= -->
-<section id="projects">
-    <div class="container">
-        <h2 class="section-title fade-in" data-translate="projects_title">Featured Projects</h2>
-        <div class="projects-grid fade-in">
-
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-preview">
-                            <i class="fas fa-play-circle"></i>
-                            <span data-translate="proj1_preview">Simulator-Survivor</span>
-                        </div>
-                    </div>
-                    <video class="project-bg-video" autoplay muted loop playsinline poster="assets/thumbnail/AlphaExilemet.png">
-                        <source src="assets/videos/alpha_exilemet_clip.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3 class="project-title">Alpha Exilemet</h3>
-                        <div class="project-status">
-                            <span class="status-badge in-progress" data-translate="proj1_status">In-progress</span>
-                        </div>
-                    </div>
-                    <p class="project-description" data-translate="proj1_desc">
-                        A sci-fi survival exploration game where a crashed astronaut gathers resources,
-                        manages oxygen, and repairs their spaceship to escape an alien planet.
-                    </p>
-                    <div class="project-metrics">
-                        <div class="metric"><i class="fas fa-clock"></i><span>2 <span data-translate="time_months">Months</span></span></div>
-                        <div class="metric"><i class="fas fa-users"></i><span data-translate="team_solo">Solo Project</span></div>
-                        <div class="metric"><i class="fa-solid fa-fire"></i><span data-translate="proj1_type">C++ Project</span></div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unreal Engine 5.7</span>
-                        <span class="tech-tag">BP & C++</span>
-                        <span class="tech-tag">PC</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> <span data-translate="link_view">View Project</span></a>
-                        <a href="https://github.com/RT-Organization/Alpha-Exilemet" class="project-link"><i class="fab fa-github"></i> <span data-translate="link_source">Source Code</span></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-preview">
-                            <i class="fas fa-play-circle"></i>
-                            <span data-translate="proj2_preview">Multiplayer - FPS</span>
-                        </div>
-                    </div>
-                    <video class="project-bg-video" autoplay muted loop playsinline poster="assets/thumbnail/SyncedRush.png">
-                        <source src="assets/videos/synced_rush_clip.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3 class="project-title">Synced Rush</h3>
-                        <div class="project-status">
-                            <span class="status-badge completed" data-translate="proj2_status">MVP Completed</span>
-                        </div>
-                    </div>
-                    <p class="project-description" data-translate="proj2_desc">
-                        A fast-paced multiplayer FPS where players compete in 1v1 and 2v2 matches using dynamic
-                        movement abilities and responsive shooting mechanics.
-                    </p>
-                    <div class="project-metrics">
-                        <div class="metric"><i class="fas fa-clock"></i><span>3 <span data-translate="time_months">Months</span></span></div>
-                        <div class="metric"><i class="fas fa-users"></i><span>3 <span data-translate="team_members">Members</span></span></div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Multiplayer</span>
-                        <span class="tech-tag">PC</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://ry4ntr.itch.io/synced-rush" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> <span data-translate="link_view">View Project</span>
-                        </a>
-                        <a href="https://github.com/RT-Organization/Synced-Rush" class="project-link">
-                            <i class="fab fa-github"></i> <span data-translate="link_source">Source Code</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-preview">
-                            <i class="fas fa-eye"></i>
-                            <span data-translate="proj3_preview">Game Jam Project</span>
-                        </div>
-                    </div>
-                    <video class="project-bg-video" autoplay muted loop playsinline poster="assets/thumbnail/StayRoom.png">
-                    </video>
-                </div>
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3 class="project-title">Stay Room</h3>
-                        <div class="project-status">
-                            <span class="status-badge completed" data-translate="proj3_status">Complete</span>
-                        </div>
-                    </div>
-                    <p class="project-description" data-translate="proj3_desc">
-                        A chaotic management game built in a 2-day Game Jam where players modify houserooms in
-                        real time to satisfy the needs of visiting NPC tenants.
-                    </p>
-                    <div class="project-metrics">
-                        <div class="metric"><i class="fas fa-clock"></i><span>2 <span data-translate="time_days">Days</span></span></div>
-                        <div class="metric"><i class="fas fa-users"></i><span>6 <span data-translate="team_members">Members</span></span></div>
-                        <div class="metric"><i class="fa-solid fa-fire"></i><span data-translate="proj3_type">AI programming</span></div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">GitHub</span>
-                        <span class="tech-tag">PC</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://zankysh.itch.io/stay-room" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> <span data-translate="link_view">View Project</span>
-                        </a>
-                        <a href="https://github.com/Ry4nTR/Stay-Room" class="project-link">
-                            <i class="fab fa-github"></i> <span data-translate="link_source">Source Code</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-preview">
-                            <i class="fas fa-eye"></i>
-                            <span data-translate="proj4_preview">First Group Project</span>
-                        </div>
-                    </div>
-                    <video class="project-bg-video" autoplay muted loop playsinline poster="assets/thumbnail/ProjectARK.png">
-                    </video>
-                </div>
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3 class="project-title">Project ARK</h3>
-                        <div class="project-status">
-                            <span class="status-badge completed" data-translate="proj4_status">Complete</span>
-                        </div>
-                    </div>
-                    <p class="project-description" data-translate="proj4_desc">
-                        A sci-fi narrative adventure with psychological elements set on a spaceship in distress. The
-                        player is a volunteer in a human-machine experiment who must solve puzzles, interact with a
-                        mysterious AI, and make crucial choices as they uncover the truth about the accident on
-                        board.
-                    </p>
-                    <div class="project-metrics">
-                        <div class="metric"><i class="fas fa-clock"></i><span>2 <span data-translate="time_months">Months</span></span></div>
-                        <div class="metric"><i class="fas fa-users"></i><span>4 <span data-translate="team_members">Members</span></span></div>
-                        <div class="metric"><i class="fa-solid fa-fire"></i><span data-translate="proj4_type">HDRP Project</span></div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">GitHub</span>
-                        <span class="tech-tag">PC</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://ry4ntr.itch.io/project-ark" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> <span data-translate="link_view">View Project</span>
-                        </a>
-                        <a href="https://github.com/Ry4nTR/ProjectWork" class="project-link">
-                            <i class="fab fa-github"></i> <span data-translate="link_source">Source Code</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-preview">
-                            <i class="fas fa-play-circle"></i>
-                            <span data-translate="proj5_preview">First Project</span>
-                        </div>
-                    </div>
-                    <video class="project-bg-video" autoplay muted loop playsinline poster="assets/thumbnail/LaScatolaDelNonno.png">
-                    </video>
-                </div>
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3 class="project-title">La scatola del nonno</h3>
-                        <div class="project-status">
-                            <span class="status-badge completed" data-translate="proj5_status">Completed</span>
-                        </div>
-                    </div>
-                    <p class="project-description" data-translate="proj5_desc">
-                        A narrative adventure about childhood and memory, set in post-war Italy. Through the
-                        grandfather's objects, the player gradually discovers the weight of war behind the stories
-                        of an old veteran.
-                    </p>
-                    <div class="project-metrics">
-                        <div class="metric"><i class="fas fa-clock"></i><span>3 <span data-translate="time_weeks">Weeks</span></span></div>
-                        <div class="metric"><i class="fas fa-users"></i><span data-translate="team_solo">Solo Project</span></div>
-                        <div class="metric"><i class="fa-solid fa-fire"></i><span data-translate="proj5_type">First Project</span></div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">PC</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://ry4ntr.itch.io/la-scatola-del-nonno" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> <span data-translate="link_view">View Project</span>
-                        </a>
-                        <a href="https://github.com/Ry4nTR/La-scatola-del-nonno" class="project-link">
-                            <i class="fab fa-github"></i> <span data-translate="link_source">Source Code</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- =========================================
-     5. CONTACT SECTION
-     ========================================= -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title fade-in" data-translate="contact_title">Get In Touch</h2>
-        <div class="contact-content fade-in">
-            <p data-translate="contact_desc">
-                I'm always open to discussing new opportunities, collaborations, or simply
-                connecting with fellow game developers. Feel free to reach out!
-            </p>
-
-            <!-- Placeholder for optional contact info cards (currently empty) -->
-            <div class="contact-info">
-            </div>
-
-            <!-- Contact form — submission handled by EmailJS (initialised below) -->
-            <div class="contact-form-container">
-                <form id="contact-form" class="contact-form">
-                    <!-- name / from_name maps to the EmailJS template variable -->
-                    <div class="form-group">
-                        <input type="text" id="name" name="from_name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-                    <!-- email / reply_to maps to the EmailJS template variable -->
-                    <div class="form-group">
-                        <input type="email" id="email" name="reply_to" required>
-                        <label for="email">Your Email</label>
-                    </div>
-                    <!-- message body -->
-                    <div class="form-group">
-                        <textarea id="message" name="message" required></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- =========================================
-     6. SCRIPTS
-     ========================================= -->
-
-<!-- EmailJS SDK — must be loaded before the inline init block below -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-    // Initialise EmailJS with the public key, then wire up the contact form
-    emailjs.init('aKwa51w0joXLCCtYv');
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        // Send the form data using the configured service and template IDs
-        emailjs.sendForm('service_t5w9rmq', 'template_zxf9m8g', this)
-            .then(() => {
-                this.reset();
-                // Show a temporary success message beneath the form
-                const confirmation = document.createElement('p');
-                confirmation.className = 'form-confirmation visible';
-                confirmation.textContent = '✓ Message sent successfully';
-                this.appendChild(confirmation);
-                setTimeout(() => confirmation.remove(), 3000);
-            })
-            .catch(err => {
-                console.error('Email failed to send:', err);
-            });
-    });
-</script>
-
-<!-- =========================================
-     7. FOOTER
-     ========================================= -->
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Rostyslav Terleskyy. All rights reserved.</p>
-    </div>
-</footer>
-
-<!-- Main JS — loaded last so the DOM is fully available -->
-<script src="script.js"></script>
-
-
-<!-- =========================================
-     8. VIDEO MODAL
-     ========================================= -->
-<!-- Full-screen modal that plays a project clip when a project thumbnail is clicked -->
-<div id="video-modal" class="video-modal">
-    <!-- Close button — wired to closeVideoModal() in script.js -->
-    <button class="close-modal">&times;</button>
-    <div class="modal-content">
-        <!-- src is set dynamically by JS when the modal opens -->
-        <video id="modal-video" controls autoplay loop playsinline></video>
-    </div>
-</div>
+    </footer>
 
 </body>
+
 </html>

@@ -1,0 +1,81 @@
+/* =========================================
+   ABOUT
+   ========================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: start;
+  gap: 60px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  max-width: 68ch;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* Opening statement, set apart with an accent bar */
+.about-text .about-lead {
+  padding-left: 20px;
+  border-left: 3px solid var(--accent);
+  color: var(--accent-soft);
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.about-fact {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 12px 18px;
+  background: var(--surface);
+  border: 1px solid var(--accent-20);
+  border-radius: var(--radius-md);
+  color: var(--text-soft);
+}
+
+.about-fact i {
+  color: var(--accent);
+}
+
+.about-fact strong {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+.about-journey {
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--accent-20);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+}
+
+.about-journey__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 26px;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-journey {
+    padding: 24px 20px;
+  }
+
+  .about-text .about-lead {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,19 @@
+/* =========================================
+   CONTACT
+   ========================================= */
+.contact {
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--accent-20);
+}
+
+.contact__content {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact__text {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}

@@ -1,0 +1,62 @@
+/* =========================================
+   TABS  (segmented control)
+   Behaviour lives in js/components/tabs.js
+   ========================================= */
+.tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px;
+  background: var(--surface);
+  border: 1px solid var(--accent-20);
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(10px);
+}
+
+.tabs__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  color: var(--text-muted);
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.tabs__tab:hover {
+  background: var(--accent-10);
+  color: var(--text-strong);
+}
+
+.tabs__tab[aria-selected="true"] {
+  background: var(--accent-gradient);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+}
+
+.tabs__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 7px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 11px;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    width: 100%;
+    border-radius: var(--radius-lg);
+  }
+
+  .tabs__tab {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 10px 14px;
+  }
+}

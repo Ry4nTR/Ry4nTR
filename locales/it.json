@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Rostyslav Terletskyy — Programmatore",
+    "description": "Portfolio di Rostyslav Terletskyy, programmatore junior tra sviluppo di videogiochi (Unity, Unreal Engine) e sviluppo web (TypeScript, Three.js)."
+  },
+
+  "nav": {
+    "home": "Home",
+    "about": "Chi Sono",
+    "skills": "Tecnologie",
+    "projects": "Progetti",
+    "contact": "Contatti",
+    "menu": "Apri o chiudi il menu",
+    "language": "Cambia lingua"
+  },
+
+  "hero": {
+    "titles": [
+      "Programmatore",
+      "Game Programmer",
+      "Web Developer",
+      "Sviluppatore Unreal Engine",
+      "Sviluppatore Unity",
+      "Risolutore di problemi",
+      "Appassionato di tecnologia"
+    ],
+    "description": "Programmatore junior a cui piace trasformare le idee in qualcosa con cui si può giocare o interagire. Ho realizzato un FPS multiplayer, avventure narrative e un configuratore 3D in tempo reale per il browser, lavorando con C++, C#, TypeScript e altri linguaggi. Quando non programmo, sono probabilmente immerso in uno sparatutto o in un picchiaduro 3D.",
+    "viewWork": "Guarda i miei progetti",
+    "resume": "Scarica CV",
+    "reelOpen": "Apri i dettagli del progetto"
+  },
+
+  "about": {
+    "title": "Chi Sono",
+    "lead": "Sono un programmatore junior che dà il meglio davanti a un problema difficile da risolvere, con qualcosa da vedere sullo schermo come risultato.",
+    "p1": "Il mio lavoro si muove tra due mondi. Sul fronte videogiochi ho realizzato un FPS multiplayer, un survival, avventure narrative e progetti per game jam in Unity e Unreal Engine, soprattutto in C# e C++. Sul fronte web ho sviluppato un configuratore 3D interattivo con Three.js e TypeScript, insieme al sito che lo presenta.",
+    "p2": "Ciò che li unisce è il modo in cui lavoro. Mi piace capire cosa succede davvero sotto il cofano, scrivere codice che un altro possa riprendere senza manuale e restare vicino a designer e artisti perché il risultato funzioni anche come esperienza. Cerco un team in cui continuare a imparare in fretta e iniziare subito a contribuire.",
+    "languagesLabel": "Parlo",
+    "languages": "italiano, inglese e ucraino",
+    "journeyTitle": "Percorso",
+    "present": "Oggi"
+  },
+
+  "skills": {
+    "title": "Tecnologie",
+    "subtitle": "Con cosa lavoro. Tocca una tecnologia con un numero per vedere i progetti in cui l'ho usata.",
+    "usedIn": {
+      "one": "Usata in {n} progetto",
+      "other": "Usata in {n} progetti"
+    }
+  },
+
+  "projects": {
+    "title": "Progetti",
+    "subtitle": "Scegli un percorso da esplorare, oppure guarda tutto insieme.",
+    "tabsLabel": "Categorie di progetti",
+    "tabs": { "all": "Tutti" },
+    "allDescription": "Tutto quello che ho costruito finora, tra web e videogiochi.",
+    "filteredBy": "Filtrati per",
+    "clearFilter": "Rimuovi filtro",
+    "empty": "Nessun progetto corrisponde a questa selezione.",
+    "links": {
+      "view": "Guarda Progetto",
+      "source": "Codice Sorgente"
+    },
+    "details": {
+      "duration": "Durata",
+      "team": "Team",
+      "focus": "Focus",
+      "platform": "Piattaforma"
+    }
+  },
+
+  "status": {
+    "in-progress": "In sviluppo",
+    "mvp": "MVP completato",
+    "completed": "Completato"
+  },
+
+  "units": {
+    "day": { "one": "{n} giorno", "other": "{n} giorni" },
+    "week": { "one": "{n} settimana", "other": "{n} settimane" },
+    "month": { "one": "{n} mese", "other": "{n} mesi" },
+    "year": { "one": "{n} anno", "other": "{n} anni" }
+  },
+
+  "team": {
+    "solo": "Progetto singolo",
+    "members": { "one": "{n} membro", "other": "{n} membri" }
+  },
+
+  "contact": {
+    "title": "Contattami",
+    "description": "Sono sempre aperto a discutere nuove opportunità, collaborazioni o semplicemente a fare rete con altri sviluppatori. Non esitare a contattarmi!",
+    "name": "Il tuo nome",
+    "email": "La tua email",
+    "message": "Il tuo messaggio",
+    "send": "Invia messaggio",
+    "sending": "Invio in corso…",
+    "success": "Messaggio inviato con successo!",
+    "error": "Qualcosa è andato storto. Riprova tra un attimo."
+  },
+
+  "modal": {
+    "close": "Chiudi"
+  },
+
+  "footer": {
+    "rights": "© {year} Rostyslav Terletskyy. Tutti i diritti riservati."
+  }
+}

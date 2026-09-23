@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Rostyslav Terletskyy — Programmer",
+    "description": "Portfolio of Rostyslav Terletskyy, a junior programmer working across game development (Unity, Unreal Engine) and web development (TypeScript, Three.js)."
+  },
+
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Tech Stack",
+    "projects": "Projects",
+    "contact": "Contact",
+    "menu": "Toggle menu",
+    "language": "Change language"
+  },
+
+  "hero": {
+    "titles": [
+      "Programmer",
+      "Game Programmer",
+      "Web Developer",
+      "Unreal Engine Developer",
+      "Unity Developer",
+      "Problem Solver",
+      "Tech Enthusiast"
+    ],
+    "description": "Junior programmer who likes turning ideas into things you can play or click on. I've built a multiplayer FPS, narrative adventures and a real-time 3D configurator for the browser, working in C++, C#, TypeScript and a handful of other languages. When I'm not coding, I'm probably deep into a shooter or a 3D fighting game.",
+    "viewWork": "View My Work",
+    "resume": "Download Resume",
+    "reelOpen": "Open project details"
+  },
+
+  "about": {
+    "title": "About Me",
+    "lead": "I'm a junior programmer who's happiest when there's a hard problem to solve and something on screen to show for it.",
+    "p1": "My work sits between two worlds. On the game side I've built a multiplayer FPS, a survival game, narrative adventures and game-jam entries in Unity and Unreal Engine, mostly in C# and C++. On the web side I've built an interactive 3D configurator with Three.js and TypeScript, along with the website that presents it.",
+    "p2": "What connects the two is how I work. I like understanding what's really happening under the hood, writing code that someone else can pick up without a manual, and staying close to designers and artists so the result feels right. I'm looking for a team where I can keep learning fast and start contributing right away.",
+    "languagesLabel": "I speak",
+    "languages": "Italian, English and Ukrainian",
+    "journeyTitle": "Journey",
+    "present": "Present"
+  },
+
+  "skills": {
+    "title": "Tech Stack",
+    "subtitle": "What I work with. Tap a technology with a number to see the projects where I've used it.",
+    "usedIn": {
+      "one": "Used in {n} project",
+      "other": "Used in {n} projects"
+    }
+  },
+
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Pick a path to explore, or see everything at once.",
+    "tabsLabel": "Project categories",
+    "tabs": { "all": "All" },
+    "allDescription": "Everything I've built so far, across web and games.",
+    "filteredBy": "Filtered by",
+    "clearFilter": "Clear filter",
+    "empty": "No projects match this selection yet.",
+    "links": {
+      "view": "View Project",
+      "source": "Source Code"
+    },
+    "details": {
+      "duration": "Duration",
+      "team": "Team",
+      "focus": "Focus",
+      "platform": "Platform"
+    }
+  },
+
+  "status": {
+    "in-progress": "In progress",
+    "mvp": "MVP completed",
+    "completed": "Completed"
+  },
+
+  "units": {
+    "day": { "one": "{n} day", "other": "{n} days" },
+    "week": { "one": "{n} week", "other": "{n} weeks" },
+    "month": { "one": "{n} month", "other": "{n} months" },
+    "year": { "one": "{n} year", "other": "{n} years" }
+  },
+
+  "team": {
+    "solo": "Solo project",
+    "members": { "one": "{n} member", "other": "{n} members" }
+  },
+
+  "contact": {
+    "title": "Get In Touch",
+    "description": "I'm always open to discussing new opportunities, collaborations, or simply connecting with fellow developers. Feel free to reach out!",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending…",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again in a moment."
+  },
+
+  "modal": {
+    "close": "Close"
+  },
+
+  "footer": {
+    "rights": "© {year} Rostyslav Terletskyy. All rights reserved."
+  }
+}

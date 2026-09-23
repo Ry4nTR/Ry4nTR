@@ -1,0 +1,188 @@
+/* =========================================
+   PROJECT CARD
+   Built by js/sections/project-card.js
+   ========================================= */
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--accent-20);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  /* "backwards": the animation releases the transform afterwards, so :hover still works */
+  animation: card-in 0.5s ease backwards;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-accent);
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --- Media --- */
+.project-card__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: linear-gradient(45deg, #2a2a3e, #26323e);
+}
+
+/* Shown when a project has no (or a missing) thumbnail */
+.project-card__fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-30);
+  font-size: 3rem;
+}
+
+.project-card__thumb,
+.project-card__preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card__thumb {
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-card__thumb {
+  transform: scale(1.04);
+}
+
+/* Muted video that plays on hover (desktop only) */
+.project-card__preview {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card__preview.is-playing {
+  opacity: 1;
+}
+
+.project-card__status {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.project-card__play {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding-left: 2px;
+  background: var(--bg-glass);
+  border: 1px solid var(--accent-30);
+  border-radius: 50%;
+  color: var(--text-strong);
+  font-size: 0.85rem;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.project-card:hover .project-card__play {
+  border-color: var(--accent);
+  color: var(--accent-light);
+}
+
+/* --- Body --- */
+.project-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px 24px 24px;
+}
+
+.project-card__kicker {
+  color: var(--accent-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-card__title {
+  color: var(--text-strong);
+  font-size: 1.35rem;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.project-card:hover .project-card__title {
+  color: var(--accent-light);
+}
+
+/* The title is a real button; ::after stretches it over the whole card so the card is one click target */
+.project-card__open {
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.project-card__open::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.project-card__open:focus-visible {
+  outline: none;
+}
+
+.project-card__open:focus-visible::after {
+  border-radius: var(--radius-lg);
+  outline: 2px solid var(--accent-light);
+  outline-offset: -2px;
+}
+
+.project-card__summary {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Links stay above the stretched title button */
+.project-card .project-links {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.project-card .tag-list {
+  margin-top: 2px;
+}

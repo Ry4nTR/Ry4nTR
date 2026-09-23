@@ -1,0 +1,24 @@
+/* =========================================
+   PAGE LAYOUT
+   ========================================= */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  position: relative;
+  z-index: var(--z-content);
+  padding: 100px 0;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}

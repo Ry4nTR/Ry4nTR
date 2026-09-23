@@ -1,0 +1,85 @@
+{
+  "groups": [
+    {
+      "id": "languages",
+      "icon": "fa-solid fa-code",
+      "title": { "en": "Languages", "it": "Linguaggi" },
+      "items": [
+        { "name": "C++" },
+        { "name": "C#" },
+        { "name": "Java" },
+        { "name": "JavaScript" },
+        { "name": "TypeScript" },
+        { "name": "HTML" },
+        { "name": "CSS" }
+      ]
+    },
+    {
+      "id": "engines",
+      "icon": "fa-solid fa-gamepad",
+      "title": { "en": "Engines & Frameworks", "it": "Engine e Framework" },
+      "items": [
+        {
+          "name": "Unreal Engine 5",
+          "aliases": ["Unreal Engine", "Unreal Engine 5.7"],
+          "logo": "assets/icons/unreal-logo.png",
+          "note": { "en": "C++ & Blueprints", "it": "C++ e Blueprints" }
+        },
+        {
+          "name": "Unity",
+          "logo": "assets/icons/unity-logo.png",
+          "note": "C#"
+        },
+        {
+          "name": "Three.js",
+          "note": { "en": "Real-time 3D", "it": "3D in tempo reale" }
+        }
+      ]
+    },
+    {
+      "id": "disciplines",
+      "icon": "fa-solid fa-lightbulb",
+      "title": { "en": "What I do", "it": "Di cosa mi occupo" },
+      "items": [
+        {
+          "name": {
+            "en": "Gameplay & systems programming",
+            "it": "Programmazione di gameplay e sistemi"
+          }
+        },
+        {
+          "name": {
+            "en": "Multiplayer & AI programming",
+            "it": "Programmazione multiplayer e IA"
+          },
+          "aliases": ["Multiplayer", "AI"]
+        },
+        {
+          "name": { "en": "Game design", "it": "Game design" },
+          "note": {
+            "en": "Mechanics, balancing, UI/UX",
+            "it": "Meccaniche, bilanciamento, UI/UX"
+          }
+        },
+        {
+          "name": { "en": "Database fundamentals", "it": "Fondamenti di database" }
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "icon": "fa-solid fa-screwdriver-wrench",
+      "title": { "en": "Tools & Workflow", "it": "Strumenti e Workflow" },
+      "showProjectCount": false,
+      "items": [
+        { "name": "Git" },
+        { "name": "GitHub" },
+        { "name": "Fork" },
+        { "name": "Trello" },
+        { "name": "Jira" },
+        { "name": "ClickUp" },
+        { "name": "Notion" }
+      ]
+    }
+  ]
+}

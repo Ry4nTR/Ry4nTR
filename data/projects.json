@@ -1,0 +1,171 @@
+{
+  "categories": [
+    {
+      "id": "web",
+      "icon": "fa-solid fa-globe",
+      "label": { "en": "Web Developer", "it": "Web Developer" },
+      "description": {
+        "en": "Real-time 3D and interactive tools for the browser.",
+        "it": "3D in tempo reale e strumenti interattivi per il browser."
+      }
+    },
+    {
+      "id": "game",
+      "icon": "fa-solid fa-gamepad",
+      "label": { "en": "Game Programmer", "it": "Game Programmer" },
+      "description": {
+        "en": "Gameplay, multiplayer and AI in Unity and Unreal Engine.",
+        "it": "Gameplay, multiplayer e IA in Unity e Unreal Engine."
+      }
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "3d-configurator",
+      "category": "web",
+      "title": "3D Product Configurator",
+      "kicker": { "en": "Internship project", "it": "Progetto di stage" },
+      "summary": {
+        "en": "An interactive 3D product configurator that renders in real time in the browser, built with Three.js and TypeScript during my internship at Studio Evil.",
+        "it": "Un configuratore 3D di prodotto interattivo che gira in tempo reale nel browser, sviluppato con Three.js e TypeScript durante il mio stage da Studio Evil."
+      },
+      "description": {
+        "en": "During my internship at Studio Evil I studied Three.js and used it to develop and optimize an interactive product configurator that renders in real time in the browser. I also built the business website that presents it.",
+        "it": "Durante lo stage da Studio Evil ho studiato Three.js e l'ho usato per sviluppare e ottimizzare un configuratore di prodotto interattivo che gira in tempo reale nel browser. Ho realizzato anche il sito business che lo presenta."
+      },
+      "focus": { "en": "Real-time 3D", "it": "3D in tempo reale" },
+      "platform": "Browser",
+      "tech": ["Three.js", "TypeScript"],
+      "media": {
+        "thumbnail": "assets/thumbnail/3DConfigurator.png"
+      },
+      "links": []
+    },
+
+    {
+      "id": "alpha-exilemet",
+      "category": "game",
+      "title": "Alpha Exilemet",
+      "kicker": { "en": "Simulator-Survivor", "it": "Simulatore-Sopravvivenza" },
+      "status": "in-progress",
+      "summary": {
+        "en": "A sci-fi survival exploration game where a crashed astronaut gathers resources, manages oxygen, and repairs their spaceship to escape an alien planet.",
+        "it": "Un gioco di esplorazione e sopravvivenza fantascientifico in cui un astronauta precipitato raccoglie risorse, gestisce l'ossigeno e ripara la sua astronave per fuggire da un pianeta alieno."
+      },
+      "duration": { "value": 2, "unit": "month" },
+      "team": { "type": "solo" },
+      "focus": { "en": "C++ project", "it": "Progetto C++" },
+      "platform": "PC",
+      "tech": ["Unreal Engine 5.7", "Blueprints", "C++"],
+      "media": {
+        "thumbnail": "assets/thumbnail/AlphaExilemet.png",
+        "video": "assets/videos/alpha_exilemet_clip.mp4"
+      },
+      "links": [
+        { "kind": "source", "url": "https://github.com/RT-Organization/Alpha-Exilemet" }
+      ],
+      "inReel": true
+    },
+
+    {
+      "id": "synced-rush",
+      "category": "game",
+      "title": "Synced Rush",
+      "kicker": { "en": "Multiplayer FPS", "it": "FPS multigiocatore" },
+      "status": "mvp",
+      "summary": {
+        "en": "A fast-paced multiplayer FPS where players compete in 1v1 and 2v2 matches using dynamic movement abilities and responsive shooting mechanics.",
+        "it": "Un frenetico FPS multigiocatore in cui i giocatori competono in partite 1v1 e 2v2 utilizzando abilità di movimento dinamiche e meccaniche di tiro reattive."
+      },
+      "duration": { "value": 3, "unit": "month" },
+      "team": { "type": "team", "size": 3 },
+      "platform": "PC",
+      "tech": ["Unity", "C#", "Multiplayer"],
+      "media": {
+        "thumbnail": "assets/thumbnail/SyncedRush.png",
+        "video": "assets/videos/synced_rush_clip.mp4"
+      },
+      "links": [
+        { "kind": "view", "url": "https://ry4ntr.itch.io/synced-rush" },
+        { "kind": "source", "url": "https://github.com/RT-Organization/Synced-Rush" }
+      ],
+      "inReel": true
+    },
+
+    {
+      "id": "stay-room",
+      "category": "game",
+      "title": "Stay Room",
+      "kicker": { "en": "Game Jam project", "it": "Progetto Game Jam" },
+      "status": "completed",
+      "summary": {
+        "en": "A chaotic management game built in a 2-day Game Jam where players modify the rooms of a house in real time to satisfy the needs of visiting NPC tenants.",
+        "it": "Un caotico gioco gestionale sviluppato in una Game Jam di 2 giorni in cui i giocatori modificano le stanze di una casa in tempo reale per soddisfare i bisogni dei coinquilini NPC."
+      },
+      "duration": { "value": 2, "unit": "day" },
+      "team": { "type": "team", "size": 6 },
+      "focus": { "en": "AI programming", "it": "Programmazione IA" },
+      "platform": "PC",
+      "tech": ["Unity", "C#", "AI", "GitHub"],
+      "media": {
+        "thumbnail": "assets/thumbnail/StayRoom.png"
+      },
+      "links": [
+        { "kind": "view", "url": "https://zankysh.itch.io/stay-room" },
+        { "kind": "source", "url": "https://github.com/Ry4nTR/Stay-Room" }
+      ]
+    },
+
+    {
+      "id": "project-ark",
+      "category": "game",
+      "title": "Project ARK",
+      "kicker": { "en": "First group project", "it": "Primo progetto di gruppo" },
+      "status": "completed",
+      "summary": {
+        "en": "A sci-fi narrative adventure with psychological elements, set on a spaceship in distress. Solve puzzles, talk to a mysterious AI and uncover the truth about the accident.",
+        "it": "Un'avventura narrativa fantascientifica con elementi psicologici, ambientata su un'astronave in avaria. Risolvi enigmi, interagisci con una misteriosa IA e scopri la verità sull'incidente."
+      },
+      "description": {
+        "en": "A sci-fi narrative adventure with psychological elements set on a spaceship in distress. The player is a volunteer in a human-machine experiment who must solve puzzles, interact with a mysterious AI, and make crucial choices as they uncover the truth about the accident on board.",
+        "it": "Un'avventura narrativa fantascientifica con elementi psicologici ambientata su un'astronave in avaria. Il giocatore è un volontario in un esperimento uomo-macchina che deve risolvere enigmi, interagire con una misteriosa IA e fare scelte cruciali mentre scopre la verità sull'incidente a bordo."
+      },
+      "duration": { "value": 2, "unit": "month" },
+      "team": { "type": "team", "size": 4 },
+      "focus": { "en": "HDRP project", "it": "Progetto HDRP" },
+      "platform": "PC",
+      "tech": ["Unity", "C#", "HDRP", "GitHub"],
+      "media": {
+        "thumbnail": "assets/thumbnail/ProjectARK.png"
+      },
+      "links": [
+        { "kind": "view", "url": "https://ry4ntr.itch.io/project-ark" },
+        { "kind": "source", "url": "https://github.com/Ry4nTR/ProjectWork" }
+      ]
+    },
+
+    {
+      "id": "la-scatola-del-nonno",
+      "category": "game",
+      "title": "La scatola del nonno",
+      "kicker": { "en": "First project", "it": "Primo progetto" },
+      "status": "completed",
+      "summary": {
+        "en": "A narrative adventure about childhood and memory, set in post-war Italy. Through the grandfather’s objects, the player gradually discovers the weight of war behind the stories of an old veteran.",
+        "it": "Un'avventura narrativa sull'infanzia e la memoria, ambientata nell'Italia del dopoguerra. Attraverso gli oggetti del nonno, il giocatore scopre gradualmente il peso della guerra dietro i racconti di un vecchio veterano."
+      },
+      "duration": { "value": 3, "unit": "week" },
+      "team": { "type": "solo" },
+      "platform": "PC",
+      "tech": ["Unity", "C#"],
+      "media": {
+        "thumbnail": "assets/thumbnail/LaScatolaDelNonno.png"
+      },
+      "links": [
+        { "kind": "view", "url": "https://ry4ntr.itch.io/la-scatola-del-nonno" },
+        { "kind": "source", "url": "https://github.com/Ry4nTR/La-scatola-del-nonno" }
+      ]
+    }
+  ]
+}

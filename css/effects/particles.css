@@ -1,0 +1,17 @@
+/* =========================================
+   BACKGROUND PARTICLES
+   Particles are created and animated by js/effects/particles.js
+   ========================================= */
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-particles);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.6;
+}

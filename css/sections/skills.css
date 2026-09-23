@@ -1,0 +1,46 @@
+/* =========================================
+   TECH STACK
+   ========================================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.skill-group {
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--accent-20);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition);
+}
+
+.skill-group:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 15px 30px var(--accent-20);
+}
+
+.skill-group__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.skill-group__header i {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.skill-group__title {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

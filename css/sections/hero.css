@@ -1,0 +1,212 @@
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+  z-index: var(--z-hero);
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: calc(var(--nav-height) + 40px) 0 60px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(192, 132, 252, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+.hero__grid--single {
+  grid-template-columns: 1fr;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Text --- */
+.hero__name {
+  margin-bottom: 20px;
+  font-size: clamp(2.5rem, 5.2vw, 4rem);
+  font-weight: 300;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+}
+
+.hero__subtitle {
+  display: flex;
+  align-items: center;
+  min-height: 2.2rem;
+  margin-bottom: 24px;
+  color: var(--accent);
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  opacity: 0;
+}
+
+.typing-cursor {
+  margin-left: 2px;
+  color: var(--accent);
+  animation: blink 1s infinite;
+}
+
+.hero__description {
+  max-width: 600px;
+  margin-bottom: 36px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+}
+
+.hero__social {
+  display: flex;
+  gap: 12px;
+}
+
+/* --- Entrance sequence: plays once, when the app is ready --- */
+body:not(.is-loading) .hero__name { animation: fade-in-up 1s ease forwards 0.3s; }
+body:not(.is-loading) .hero__subtitle { animation: fade-in-up 1s ease forwards 0.5s; }
+body:not(.is-loading) .hero__description { animation: fade-in-up 1s ease forwards 0.7s; }
+body:not(.is-loading) .hero__actions { animation: fade-in-up 1s ease forwards 0.9s; }
+body:not(.is-loading) .hero__visual { animation: fade-in 1s ease forwards 1s; }
+
+/* --- Video reel --- */
+.hero__visual {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  opacity: 0;
+  transition: transform 0.1s ease; /* smooths the mouse parallax */
+}
+
+.reel {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-glass);
+  border: 2px solid var(--accent-30);
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.reel:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 50px var(--accent-20);
+}
+
+.reel__video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.reel__video.is-active {
+  z-index: 2;
+  opacity: 1;
+}
+
+.reel__caption {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--bg-glass);
+  border: 1px solid var(--accent-30);
+  border-radius: var(--radius-pill);
+  color: var(--text-strong);
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.reel__caption-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.reel__dots {
+  position: absolute;
+  right: 16px;
+  bottom: 22px;
+  z-index: 3;
+  display: flex;
+  gap: 6px;
+}
+
+.reel__dot {
+  width: 7px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  transition: all var(--transition);
+}
+
+.reel__dot.is-active {
+  width: 20px;
+  background: var(--accent-light);
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(var(--nav-height) + 30px);
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero__subtitle,
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__description {
+    margin-inline: auto;
+  }
+}

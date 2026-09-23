@@ -1,0 +1,39 @@
+/* =========================================
+   MAIN STYLESHEET
+   This file only imports the others (in cascade order).
+   Every imported file does exactly one thing.
+   ========================================= */
+
+/* Base */
+@import url("base/tokens.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+@import url("base/animations.css");
+@import url("base/loading.css");
+
+/* Layout */
+@import url("layout/container.css");
+@import url("layout/navbar.css");
+@import url("layout/footer.css");
+
+/* Components */
+@import url("components/buttons.css");
+@import url("components/dropdown.css");
+@import url("components/chips.css");
+@import url("components/tabs.css");
+@import url("components/timeline.css");
+@import url("components/modal.css");
+@import url("components/form.css");
+@import url("components/project-links.css");
+@import url("components/project-card.css");
+@import url("components/project-details.css");
+
+/* Page sections */
+@import url("sections/hero.css");
+@import url("sections/about.css");
+@import url("sections/skills.css");
+@import url("sections/projects.css");
+@import url("sections/contact.css");
+
+/* Effects */
+@import url("effects/particles.css");

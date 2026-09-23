@@ -1,0 +1,79 @@
+[
+  {
+    "id": "studio-evil",
+    "type": "work",
+    "period": { "start": "2026-06", "end": "2026-08" },
+    "title": {
+      "en": "Web Developer (Internship)",
+      "it": "Web Developer (Stage)"
+    },
+    "place": {
+      "en": "Studio Evil, Bologna, Italy",
+      "it": "Studio Evil, Bologna, Italia"
+    },
+    "summary": {
+      "en": "Built an interactive real-time 3D configurator for the browser with Three.js, plus the business website that presents it.",
+      "it": "Sviluppo di un configuratore 3D interattivo in tempo reale per il browser con Three.js e del sito business che lo presenta."
+    }
+  },
+  {
+    "id": "powerup",
+    "type": "work",
+    "period": { "start": "2025-06", "end": "2025-09" },
+    "title": {
+      "en": "Unreal Game Programmer (Internship)",
+      "it": "Unreal Game Programmer (Stage)"
+    },
+    "place": {
+      "en": "PowerUp, Bologna, Italy",
+      "it": "PowerUp, Bologna, Italia"
+    },
+    "summary": {
+      "en": "Built the Unreal Engine prototype of a game submitted to Creative Europe, iterated on gameplay features and produced the trailer.",
+      "it": "Sviluppo in Unreal Engine del prototipo di un gioco presentato a Europa Creativa, iterazione sulle feature di gameplay e produzione del trailer."
+    }
+  },
+  {
+    "id": "its-olivetti",
+    "type": "education",
+    "period": { "start": "2024", "end": "2026" },
+    "title": {
+      "en": "Game Programmer Diploma",
+      "it": "Diploma Game Programmer"
+    },
+    "place": {
+      "en": "ITS Academy Adriano Olivetti, Bologna",
+      "it": "ITS Academy Adriano Olivetti, Bologna"
+    }
+  },
+  {
+    "id": "jorinf",
+    "type": "work",
+    "period": { "start": "2023-02" },
+    "title": {
+      "en": "Web Developer & Designer (Internship)",
+      "it": "Web Developer & Designer (Stage)"
+    },
+    "place": {
+      "en": "JORINF, Coimbra, Portugal",
+      "it": "JORINF, Coimbra, Portogallo"
+    },
+    "summary": {
+      "en": "Designed and developed the company website, from visual design to implementation.",
+      "it": "Progettazione e sviluppo del sito web aziendale, dal design grafico all'implementazione."
+    }
+  },
+  {
+    "id": "belluzzi-fioravanti",
+    "type": "education",
+    "period": { "start": "2019", "end": "2024" },
+    "title": {
+      "en": "IT and Telecommunications Diploma",
+      "it": "Diploma Informatica e Telecomunicazioni"
+    },
+    "place": {
+      "en": "Belluzzi Fioravanti, Bologna",
+      "it": "Belluzzi Fioravanti, Bologna"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+/* =========================================
+   LOADING STATE
+   <body class="is-loading"> until js/main.js has loaded the data and translations.
+   ========================================= */
+body > * {
+  transition: opacity 0.4s ease;
+}
+
+body.is-loading > :not(.boot-error) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Safety net: if the app never starts, explain why after a moment */
+.boot-error {
+  display: none;
+}
+
+body.is-loading .boot-error {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  opacity: 0;
+  animation: fade-in 0.4s ease 2.5s forwards;
+}
+
+.boot-error p {
+  max-width: 460px;
+}
+
+.boot-error strong {
+  color: var(--text-strong);
+}

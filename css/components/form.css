@@ -1,0 +1,75 @@
+/* =========================================
+   FORM
+   Labels float using :placeholder-shown, so no JS is needed
+   (inputs keep placeholder=" ").
+   ========================================= */
+.form {
+  display: grid;
+  gap: 22px;
+  text-align: left;
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__field input,
+.form__field textarea {
+  width: 100%;
+  padding: 26px 20px 10px;
+  background: var(--surface);
+  border: 2px solid var(--accent-20);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font: inherit;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  resize: vertical;
+}
+
+.form__field textarea {
+  min-height: 150px;
+}
+
+.form__field input:focus,
+.form__field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-20);
+}
+
+.form__field label {
+  position: absolute;
+  top: 17px;
+  left: 22px;
+  color: var(--text-faint);
+  pointer-events: none;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+.form__field input:focus + label,
+.form__field input:not(:placeholder-shown) + label,
+.form__field textarea:focus + label,
+.form__field textarea:not(:placeholder-shown) + label {
+  top: 8px;
+  color: var(--accent-light);
+  font-size: 0.75rem;
+}
+
+.form__submit {
+  justify-self: center;
+  min-width: 190px;
+}
+
+.form__status {
+  min-height: 1.6em;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.form__status--success {
+  color: var(--success);
+}
+
+.form__status--error {
+  color: var(--danger);
+}

@@ -1,0 +1,34 @@
+{
+  "social": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/Ry4nTR",
+      "icon": "fa-brands fa-github"
+    },
+    {
+      "id": "itch",
+      "label": "Itch.io",
+      "url": "https://ry4ntr.itch.io/",
+      "icon": "fa-brands fa-itch-io"
+    }
+  ],
+  "resumes": [
+    {
+      "id": "programmer",
+      "label": { "en": "Programmer", "it": "Programmatore" },
+      "files": {
+        "en": "assets/cv/CV_Programmer_ENG.pdf",
+        "it": "assets/cv/CV_Programmatore_ITA.pdf"
+      }
+    },
+    {
+      "id": "game-programmer",
+      "label": { "en": "Game Programmer", "it": "Game Programmer" },
+      "files": {
+        "en": "assets/cv/CV_GameProgrammer_ENG.pdf",
+        "it": "assets/cv/CV_GameProgrammer_ITA.pdf"
+      }
+    }
+  ]
+}

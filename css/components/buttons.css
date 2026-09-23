@@ -1,0 +1,90 @@
+/* =========================================
+   BUTTONS
+   .btn  +  .btn--primary | .btn--outline | .btn--small | .btn--icon
+   ========================================= */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn--primary {
+  background: var(--accent-gradient);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+}
+
+.btn--primary:hover {
+  box-shadow: 0 15px 40px var(--accent-40);
+}
+
+.btn--outline {
+  background: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn--outline:hover,
+.dropdown.is-open .btn--outline {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+}
+
+/* Compact pill used for "View Project" / "Source Code" */
+.btn--small {
+  gap: 8px;
+  padding: 8px 15px;
+  border-width: 1px;
+  border-color: var(--accent-30);
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn--small:hover {
+  background: var(--accent-10);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Round icon button (GitHub, Itch.io) */
+.btn--icon {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-width: 2px;
+  border-color: var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.btn--icon:hover {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+}
