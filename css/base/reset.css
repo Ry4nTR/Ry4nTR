@@ -16,6 +16,14 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /*
+    Everything is sized in rem, so changing this one value scales the whole page.
+    Up to a 1920x1080 screen the root stays at the browser default (16px).
+    On bigger screens (2K, 4K, ultrawide) it grows with the window, so the layout keeps the same
+    proportions instead of turning into a small block floating in a huge empty area.
+    Width and height are both considered, so ultrawide monitors do not overshoot.
+  */
+  font-size: max(100%, min(100vw / 120, 100vh / 60));
 }
 
 body {

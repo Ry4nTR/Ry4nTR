@@ -7,6 +7,21 @@
       "icon": "fa-brands fa-github"
     },
     {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/rostyslav-terletskyy-275189357/",
+      "icon": "fa-brands fa-linkedin-in",
+      "contact": true
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "display": "rostukterletskyy@gmail.com",
+      "url": "mailto:rostukterletskyy@gmail.com",
+      "icon": "fa-solid fa-envelope",
+      "contact": true
+    },
+    {
       "id": "itch",
       "label": "Itch.io",
       "url": "https://ry4ntr.itch.io/",

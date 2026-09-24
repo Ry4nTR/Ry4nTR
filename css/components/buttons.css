@@ -7,12 +7,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 15px 30px;
+  gap: 0.625rem;
+  padding: 1rem 2rem;
   border: 2px solid transparent;
   border-radius: var(--radius-pill);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
@@ -38,7 +38,7 @@
 }
 
 .btn--primary:hover {
-  box-shadow: 0 15px 40px var(--accent-40);
+  box-shadow: 0 0.9375rem 2.5rem var(--accent-40);
 }
 
 .btn--outline {
@@ -56,12 +56,12 @@
 
 /* Compact pill used for "View Project" / "Source Code" */
 .btn--small {
-  gap: 8px;
-  padding: 8px 15px;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
   border-width: 1px;
   border-color: var(--accent-30);
   color: var(--accent);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
@@ -73,14 +73,14 @@
 
 /* Round icon button (GitHub, Itch.io) */
 .btn--icon {
-  width: 50px;
-  height: 50px;
+  width: 3.4rem;
+  height: 3.4rem;
   padding: 0;
   border-width: 2px;
   border-color: var(--accent);
   border-radius: 50%;
   color: var(--accent);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .btn--icon:hover {

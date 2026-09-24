@@ -7,13 +7,25 @@
 }
 
 .contact__content {
-  max-width: 640px;
+  max-width: 46rem;
   margin: 0 auto;
   text-align: center;
 }
 
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact__links[hidden] {
+  display: none;
+}
+
 .contact__text {
-  margin-bottom: 40px;
-  font-size: 1.1rem;
+  margin-bottom: 1.75rem;
+  font-size: 1.2rem;
   line-height: 1.8;
 }

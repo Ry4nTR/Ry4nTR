@@ -23,13 +23,16 @@
           "name": "Unreal Engine 5",
           "aliases": ["Unreal Engine", "Unreal Engine 5.7"],
           "logo": "assets/icons/unreal-logo.png",
-          "note": { "en": "C++ & Blueprints", "it": "C++ e Blueprints" }
+          "note": "C++"
         },
+        { "name": "Blueprints" },
         {
           "name": "Unity",
           "logo": "assets/icons/unity-logo.png",
           "note": "C#"
         },
+        { "name": "HDRP" },
+        { "name": "Netcode" },
         {
           "name": "Three.js",
           "note": { "en": "Real-time 3D", "it": "3D in tempo reale" }
@@ -39,7 +42,8 @@
     {
       "id": "disciplines",
       "icon": "fa-solid fa-lightbulb",
-      "title": { "en": "What I do", "it": "Di cosa mi occupo" },
+      "title": { "en": "Areas of Work", "it": "Ambiti di lavoro" },
+      "showProjectCount": false,
       "items": [
         {
           "name": {
@@ -51,8 +55,11 @@
           "name": {
             "en": "Multiplayer & AI programming",
             "it": "Programmazione multiplayer e IA"
-          },
-          "aliases": ["Multiplayer", "AI"]
+          }
+        },
+        {
+          "name": { "en": "Web development", "it": "Sviluppo web" },
+          "note": { "en": "Cookies and security", "it": "Cookie e sicurezza" }
         },
         {
           "name": { "en": "Game design", "it": "Game design" },
@@ -62,7 +69,11 @@
           }
         },
         {
-          "name": { "en": "Database fundamentals", "it": "Fondamenti di database" }
+          "name": { "en": "Technical documentation", "it": "Documentazione tecnica" }
+        },
+        {
+          "name": { "en": "Database fundamentals", "it": "Fondamenti di database" },
+          "note": "SQL"
         }
       ]
     },

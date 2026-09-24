@@ -83,8 +83,8 @@ function initSocialLinks(links) {
         {
           class: 'btn btn--icon',
           href: link.url,
-          target: '_blank',
-          rel: 'noopener noreferrer',
+          target: link.url.startsWith('mailto:') ? null : '_blank',
+          rel: link.url.startsWith('mailto:') ? null : 'noopener noreferrer',
           title: link.label,
           'aria-label': link.label,
         },

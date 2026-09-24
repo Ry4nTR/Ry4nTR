@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Rostyslav Terletskyy — Programmatore",
-    "description": "Portfolio di Rostyslav Terletskyy, programmatore junior tra sviluppo di videogiochi (Unity, Unreal Engine) e sviluppo web (TypeScript, Three.js)."
+    "title": "Rostyslav Terletskyy — Sviluppatore Software",
+    "description": "Portfolio di Rostyslav Terletskyy, sviluppatore software junior con esperienza in sviluppo web (TypeScript, Three.js) e programmazione di videogiochi (Unity, Unreal Engine)."
   },
 
   "nav": {
@@ -16,34 +16,38 @@
 
   "hero": {
     "titles": [
-      "Programmatore",
+      "Sviluppatore Software",
+      "Programmatore Backend",
       "Game Programmer",
-      "Web Developer",
-      "Sviluppatore Unreal Engine",
-      "Sviluppatore Unity",
-      "Risolutore di problemi",
-      "Appassionato di tecnologia"
+      "Sviluppatore Web"
     ],
-    "description": "Programmatore junior a cui piace trasformare le idee in qualcosa con cui si può giocare o interagire. Ho realizzato un FPS multiplayer, avventure narrative e un configuratore 3D in tempo reale per il browser, lavorando con C++, C#, TypeScript e altri linguaggi. Quando non programmo, sono probabilmente immerso in uno sparatutto o in un picchiaduro 3D.",
-    "viewWork": "Guarda i miei progetti",
+    "description": "Sviluppatore software junior con esperienza pratica nello sviluppo web e nella programmazione di videogiochi. Realizzazione, durante uno stage, di un configuratore 3D in tempo reale e del sito aziendale che lo presenta; sviluppo di diversi progetti in Unity e Unreal Engine, tra cui un FPS multiplayer. Apprendimento rapido di nuove tecnologie e attenzione a un codice pulito e manutenibile.",
+    "viewWork": "Vedi i progetti",
     "resume": "Scarica CV",
     "reelOpen": "Apri i dettagli del progetto"
   },
 
   "about": {
     "title": "Chi Sono",
-    "lead": "Sono un programmatore junior che dà il meglio davanti a un problema difficile da risolvere, con qualcosa da vedere sullo schermo come risultato.",
-    "p1": "Il mio lavoro si muove tra due mondi. Sul fronte videogiochi ho realizzato un FPS multiplayer, un survival, avventure narrative e progetti per game jam in Unity e Unreal Engine, soprattutto in C# e C++. Sul fronte web ho sviluppato un configuratore 3D interattivo con Three.js e TypeScript, insieme al sito che lo presenta.",
-    "p2": "Ciò che li unisce è il modo in cui lavoro. Mi piace capire cosa succede davvero sotto il cofano, scrivere codice che un altro possa riprendere senza manuale e restare vicino a designer e artisti perché il risultato funzioni anche come esperienza. Cerco un team in cui continuare a imparare in fretta e iniziare subito a contribuire.",
-    "languagesLabel": "Parlo",
-    "languages": "italiano, inglese e ucraino",
+    "lead": "Sviluppatore software junior che impara rapidamente nuove tecnologie e punta a sfruttare al meglio ogni strumento e sistema, con attenzione alla qualità del risultato.",
+    "p1": "Percorso iniziato con gli studi informatici alle superiori e proseguito nello sviluppo di videogiochi, dove la costruzione di sistemi da zero è diventata l'interesse principale. Sviluppo di diversi progetti in Unity e Unreal Engine, con il ruolo di team lead in Synced Rush e Alpha Exilemet.",
+    "p2": "Presso Studio Evil, uno stage nato come valutazione di Three.js è diventato un configuratore 3D di prodotto completo e scalabile, insieme al sito aziendale che lo presenta. Il lavoro tecnicamente più impegnativo finora è il sistema multiplayer di Synced Rush: comunicazione tra server e client, sincronizzazione, compensazione della latenza e coerenza della fisica tra i giocatori.",
+    "p3": "Git su tutti i progetti e documentazione per i sistemi di media e grande dimensione, così da mantenerli semplici da gestire e modificare. Guidare più progetti ha insegnato ad adattare la comunicazione a persone diverse e a trovare un punto d'incontro, sempre in modo chiaro e diretto. Obiettivo di miglioramento attuale: progettare la struttura dei sistemi per ridurre i bug futuri e migliorarne la scalabilità.",
+    "availabilityLabel": "Disponibilità",
+    "availability": "Immediata. Tempo pieno o freelance.",
+    "locationLabel": "Sede",
+    "location": "Bologna e dintorni. Remoto o ibrido.",
+    "languagesLabel": "Lingue",
+    "languages": "italiano (fluente), inglese (livello professionale, scritto e parlato)",
+    "interestsLabel": "Interessi",
+    "interests": "FPS e giochi di enigmi, sport, assemblaggio di PC",
     "journeyTitle": "Percorso",
     "present": "Oggi"
   },
 
   "skills": {
     "title": "Tecnologie",
-    "subtitle": "Con cosa lavoro. Tocca una tecnologia con un numero per vedere i progetti in cui l'ho usata.",
+    "subtitle": "Tecnologie e strumenti usati nei progetti. Seleziona una tecnologia con un numero per filtrare i progetti che la usano.",
     "usedIn": {
       "one": "Usata in {n} progetto",
       "other": "Usata in {n} progetti"
@@ -52,10 +56,10 @@
 
   "projects": {
     "title": "Progetti",
-    "subtitle": "Scegli un percorso da esplorare, oppure guarda tutto insieme.",
+    "subtitle": "Sviluppo web e programmazione di videogiochi. Seleziona un progetto per i dettagli.",
     "tabsLabel": "Categorie di progetti",
     "tabs": { "all": "Tutti" },
-    "allDescription": "Tutto quello che ho costruito finora, tra web e videogiochi.",
+    "allDescription": "Tutti i progetti: sviluppo web e programmazione di videogiochi.",
     "filteredBy": "Filtrati per",
     "clearFilter": "Rimuovi filtro",
     "empty": "Nessun progetto corrisponde a questa selezione.",
@@ -90,15 +94,15 @@
   },
 
   "contact": {
-    "title": "Contattami",
-    "description": "Sono sempre aperto a discutere nuove opportunità, collaborazioni o semplicemente a fare rete con altri sviluppatori. Non esitare a contattarmi!",
+    "title": "Contatti",
+    "description": "Per opportunità di lavoro, progetti freelance o collaborazioni è possibile usare il modulo qui sotto oppure scrivere direttamente via email o LinkedIn.",
     "name": "Il tuo nome",
     "email": "La tua email",
     "message": "Il tuo messaggio",
     "send": "Invia messaggio",
     "sending": "Invio in corso…",
-    "success": "Messaggio inviato con successo!",
-    "error": "Qualcosa è andato storto. Riprova tra un attimo."
+    "success": "Messaggio inviato con successo.",
+    "error": "Non è stato possibile inviare il messaggio. Riprova tra poco."
   },
 
   "modal": {

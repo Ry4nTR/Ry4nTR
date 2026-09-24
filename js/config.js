@@ -30,6 +30,7 @@ export const TIMING = {
   typing: { type: 100, erase: 50, hold: 2000, gap: 500, startDelay: 1000 },
   reelInterval: 6000,
   reelFade: 800,
+  descriptionType: 16, // ms per character when the project category text types in (0 = off)
   particleInterval: 400,
   formStatus: 5000,
 };

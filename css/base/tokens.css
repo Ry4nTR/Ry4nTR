@@ -43,19 +43,21 @@
   --danger: #f87171;
 
   /* ---- Shape ---- */
-  --radius-sm: 10px;
-  --radius-md: 15px;
-  --radius-lg: 20px;
+  --radius-sm: 0.625rem;
+  --radius-md: 0.9375rem;
+  --radius-lg: 1.25rem;
   --radius-pill: 999px;
 
   /* ---- Shadows ---- */
-  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.3);
-  --shadow-accent: 0 25px 50px rgba(168, 85, 247, 0.2);
-  --shadow-glow: 0 10px 30px rgba(168, 85, 247, 0.3);
+  --shadow-soft: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.3);
+  --shadow-accent: 0 1.5625rem 3.125rem rgba(168, 85, 247, 0.2);
+  --shadow-glow: 0 0.625rem 1.875rem rgba(168, 85, 247, 0.3);
 
   /* ---- Layout ---- */
-  --container-width: 1200px;
-  --nav-height: 70px;
+  --container-width: 96rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-space: clamp(5rem, 7vw, 8rem);
+  --nav-height: 4.5rem;
 
   /* ---- Typography ---- */
   --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

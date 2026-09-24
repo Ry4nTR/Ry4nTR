@@ -79,7 +79,7 @@ async function boot() {
   safely('about', () => initAbout(data.timeline));
   safely('skills', () => initSkills(data));
   safely('projects', () => initProjects(data));
-  safely('contact', initContact);
+  safely('contact', () => initContact(data.site));
 
   safely('particles', () => initParticles(qs('.particles'), { interval: TIMING.particleInterval }));
   safely('parallax', () => initParallax(qs('.hero__visual')));

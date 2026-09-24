@@ -5,16 +5,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  padding-left: 34px;
+  gap: 1.75rem;
+  padding-left: 2.125rem;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 11px;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.6875rem;
   width: 2px;
   background: linear-gradient(180deg, var(--accent), transparent);
 }
@@ -26,12 +26,12 @@
 .timeline__marker {
   position: absolute;
   top: 0;
-  left: -34px;
+  left: -2.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   background: var(--bg-base);
   border: 2px solid var(--accent);
   border-radius: 50%;
@@ -41,25 +41,25 @@
 
 .timeline__period {
   color: var(--accent-light);
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 600;
 }
 
 .timeline__title {
   margin-top: 2px;
   color: var(--text-strong);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .timeline__place {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .timeline__summary {
-  margin-top: 8px;
+  margin-top: 0.5rem;
   color: var(--text-soft);
-  font-size: 0.92rem;
+  font-size: 1rem;
   line-height: 1.6;
 }

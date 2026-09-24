@@ -3,42 +3,54 @@
    ========================================= */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   align-items: start;
-  gap: 60px;
+  gap: clamp(2.5rem, 5vw, 6rem);
 }
 
 .about-text p {
-  margin-bottom: 20px;
-  max-width: 68ch;
-  font-size: 1.05rem;
-  line-height: 1.85;
+  margin-bottom: 1.4rem;
+  max-width: 78ch;
+  font-size: 1.15rem;
+  line-height: 1.8;
 }
 
 /* Opening statement, set apart with an accent bar */
 .about-text .about-lead {
-  padding-left: 20px;
+  padding-left: 1.5rem;
   border-left: 3px solid var(--accent);
   color: var(--accent-soft);
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 1.7vw, 1.75rem);
   font-weight: 300;
   line-height: 1.5;
 }
 
+/* Quick facts (availability, location, languages, interests) */
+.about-facts {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  list-style: none;
+}
+
 .about-fact {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 12px;
-  padding: 12px 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 0.875rem;
+  padding: 0.8rem 1.25rem;
   background: var(--surface);
   border: 1px solid var(--accent-20);
   border-radius: var(--radius-md);
   color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 .about-fact i {
+  flex: none;
+  width: 1.25rem;
   color: var(--accent);
+  text-align: center;
 }
 
 .about-fact strong {
@@ -47,32 +59,32 @@
 }
 
 .about-journey {
-  padding: 30px;
+  padding: 2.25rem;
   background: var(--surface);
   border: 1px solid var(--accent-20);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0.625rem);
 }
 
 .about-journey__title {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 26px;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
   color: var(--accent);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 2.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .about-journey {
-    padding: 24px 20px;
+    padding: 1.5rem 1.25rem;
   }
 
   .about-text .about-lead {

@@ -5,8 +5,8 @@
       "icon": "fa-solid fa-globe",
       "label": { "en": "Web Developer", "it": "Web Developer" },
       "description": {
-        "en": "Real-time 3D and interactive tools for the browser.",
-        "it": "3D in tempo reale e strumenti interattivi per il browser."
+        "en": "Front end and real-time 3D for the browser.",
+        "it": "Front end e 3D in tempo reale per il browser."
       }
     },
     {
@@ -14,8 +14,8 @@
       "icon": "fa-solid fa-gamepad",
       "label": { "en": "Game Programmer", "it": "Game Programmer" },
       "description": {
-        "en": "Gameplay, multiplayer and AI in Unity and Unreal Engine.",
-        "it": "Gameplay, multiplayer e IA in Unity e Unreal Engine."
+        "en": "Gameplay, multiplayer and systems programming in Unity and Unreal Engine.",
+        "it": "Gameplay, multiplayer e programmazione di sistemi in Unity e Unreal Engine."
       }
     }
   ],
@@ -25,23 +25,25 @@
       "id": "3d-configurator",
       "category": "web",
       "title": "3D Product Configurator",
-      "kicker": { "en": "Internship project", "it": "Progetto di stage" },
+      "kicker": { "en": "Internship at Studio Evil", "it": "Stage presso Studio Evil" },
+      "status": "completed",
       "summary": {
-        "en": "An interactive 3D product configurator that renders in real time in the browser, built with Three.js and TypeScript during my internship at Studio Evil.",
-        "it": "Un configuratore 3D di prodotto interattivo che gira in tempo reale nel browser, sviluppato con Three.js e TypeScript durante il mio stage da Studio Evil."
+        "en": "Interactive 3D product configurator for the browser, built with Three.js and TypeScript, together with the business website that presents it. Works with any 3D model and adapts its layout to the device.",
+        "it": "Configuratore 3D di prodotto interattivo per il browser, sviluppato con Three.js e TypeScript, insieme al sito aziendale che lo presenta. Funziona con qualsiasi modello 3D e adatta il layout al dispositivo."
       },
       "description": {
-        "en": "During my internship at Studio Evil I studied Three.js and used it to develop and optimize an interactive product configurator that renders in real time in the browser. I also built the business website that presents it.",
-        "it": "Durante lo stage da Studio Evil ho studiato Three.js e l'ho usato per sviluppare e ottimizzare un configuratore di prodotto interattivo che gira in tempo reale nel browser. Ho realizzato anche il sito business che lo presenta."
+        "en": "Internship project at Studio Evil. The internship started as an evaluation of the Three.js library and grew into a complete deliverable: a real-time 3D configurator, scalable to any model and product, integrated into a professional business website meant to be presented to clients interested in adding a configurator to their own site.\n\nResponsible for the whole front end and for the integration of Three.js, learned from scratch during the internship. Built several supporting tools: a benchmark tool, camera management and controls for the scene environment. The main challenges were a simple interface that fits any type of website, and a system that detects the user's device and adapts the configurator layout automatically. The company gave positive feedback on the result.",
+        "it": "Progetto di stage presso Studio Evil. Lo stage è nato come valutazione della libreria Three.js ed è diventato un prodotto completo: un configuratore 3D in tempo reale, scalabile con qualsiasi modello e prodotto, integrato in un sito aziendale professionale pensato per essere presentato a clienti interessati ad aggiungere un configuratore al proprio sito.\n\nResponsabile dell'intero front end e dell'integrazione di Three.js, imparato da zero durante lo stage. Sviluppo di diversi strumenti di supporto: un tool di benchmark, la gestione della camera e i controlli per l'ambiente della scena. Le sfide principali sono state un'interfaccia semplice e adatta a qualsiasi tipo di sito e un sistema che rileva il dispositivo in uso e adatta automaticamente il layout del configuratore. L'azienda ha dato un riscontro positivo sul risultato."
       },
-      "focus": { "en": "Real-time 3D", "it": "3D in tempo reale" },
+      "focus": { "en": "Front end, real-time 3D", "it": "Front end, 3D in tempo reale" },
       "platform": "Browser",
-      "tech": ["Three.js", "TypeScript"],
+      "tech": ["Three.js", "TypeScript", "JavaScript", "HTML", "CSS"],
       "media": {
         "thumbnail": "assets/thumbnail/3DConfigurator.png",
         "video": "assets/videos/3d_configurator_clip.mp4"
       },
-      "links": []
+      "links": [],
+      "inReel": true
     },
 
     {
@@ -51,12 +53,16 @@
       "kicker": { "en": "Simulator-Survivor", "it": "Simulatore-Sopravvivenza" },
       "status": "in-progress",
       "summary": {
-        "en": "A sci-fi survival exploration game where a crashed astronaut gathers resources, manages oxygen, and repairs their spaceship to escape an alien planet.",
-        "it": "Un gioco di esplorazione e sopravvivenza fantascientifico in cui un astronauta precipitato raccoglie risorse, gestisce l'ossigeno e ripara la sua astronave per fuggire da un pianeta alieno."
+        "en": "Sci-fi survival and exploration game in Unreal Engine 5. A crashed astronaut gathers resources, manages oxygen and repairs the spaceship to escape an alien planet.",
+        "it": "Gioco di sopravvivenza ed esplorazione fantascientifico in Unreal Engine 5. Un astronauta precipitato raccoglie risorse, gestisce l'ossigeno e ripara l'astronave per fuggire da un pianeta alieno."
+      },
+      "description": {
+        "en": "Sci-fi survival and exploration game in which a crashed astronaut gathers resources, manages oxygen and repairs the spaceship to leave an alien planet.\n\nTeam lead. Built the resource system, the upgrade system, the map and the cutscenes. The cutscenes were the most demanding part and were simplified compared to the original plan. An MVP is playable and development continues with the goal of finishing the game, with game balance as the main priority.",
+        "it": "Gioco di sopravvivenza ed esplorazione fantascientifico in cui un astronauta precipitato raccoglie risorse, gestisce l'ossigeno e ripara l'astronave per lasciare un pianeta alieno.\n\nTeam lead. Sviluppo del sistema di risorse, del sistema di potenziamenti, della mappa e delle cutscene. Le cutscene sono state la parte più impegnativa e sono state semplificate rispetto al piano iniziale. Un MVP è giocabile e lo sviluppo continua con l'obiettivo di completare il gioco, con il bilanciamento come priorità principale."
       },
       "duration": { "value": 2, "unit": "month" },
-      "team": { "type": "solo" },
-      "focus": { "en": "C++ project", "it": "Progetto C++" },
+      "team": { "type": "team", "size": 3 },
+      "focus": { "en": "Gameplay systems", "it": "Sistemi di gameplay" },
       "platform": "PC",
       "tech": ["Unreal Engine 5.7", "Blueprints", "C++"],
       "media": {
@@ -76,13 +82,18 @@
       "kicker": { "en": "Multiplayer FPS", "it": "FPS multigiocatore" },
       "status": "mvp",
       "summary": {
-        "en": "A fast-paced multiplayer FPS where players compete in 1v1 and 2v2 matches using dynamic movement abilities and responsive shooting mechanics.",
-        "it": "Un frenetico FPS multigiocatore in cui i giocatori competono in partite 1v1 e 2v2 utilizzando abilità di movimento dinamiche e meccaniche di tiro reattive."
+        "en": "Fast-paced multiplayer FPS with 1v1 and 2v2 matches, dynamic movement abilities and responsive shooting.",
+        "it": "FPS multigiocatore frenetico con partite 1v1 e 2v2, abilità di movimento dinamiche e meccaniche di tiro reattive."
+      },
+      "description": {
+        "en": "Fast-paced multiplayer FPS with 1v1 and 2v2 matches, dynamic movement abilities and responsive shooting.\n\nTeam lead. Built the multiplayer system, the weapon system, the UI and the game modes. The main technical challenge was making physics and multiplayer work together while keeping the game smooth for players on slower connections: input compensation and prediction of the player's movement keep the experience responsive despite network lag. An MVP was completed in three months.",
+        "it": "FPS multigiocatore frenetico con partite 1v1 e 2v2, abilità di movimento dinamiche e meccaniche di tiro reattive.\n\nTeam lead. Sviluppo del sistema multiplayer, del sistema di armi, dell'interfaccia e delle modalità di gioco. La sfida tecnica principale è stata far convivere fisica e multiplayer mantenendo il gioco fluido anche con connessioni più lente: la compensazione degli input e la predizione del movimento del giocatore mantengono l'esperienza reattiva nonostante la latenza di rete. Un MVP è stato completato in tre mesi."
       },
       "duration": { "value": 3, "unit": "month" },
       "team": { "type": "team", "size": 3 },
+      "focus": { "en": "Multiplayer networking", "it": "Networking multiplayer" },
       "platform": "PC",
-      "tech": ["Unity", "C#", "Multiplayer"],
+      "tech": ["Unity", "C#", "Netcode"],
       "media": {
         "thumbnail": "assets/thumbnail/SyncedRush.png",
         "video": "assets/videos/synced_rush_clip.mp4"
@@ -95,14 +106,46 @@
     },
 
     {
+      "id": "project-ark",
+      "category": "game",
+      "title": "Project ARK",
+      "kicker": { "en": "First group project", "it": "Primo progetto di gruppo" },
+      "status": "completed",
+      "summary": {
+        "en": "Sci-fi narrative adventure with psychological elements, set on a damaged spaceship. The player solves puzzles, interacts with an AI and uncovers the truth about the accident.",
+        "it": "Avventura narrativa fantascientifica con elementi psicologici, ambientata su un'astronave in avaria. Il giocatore risolve enigmi, interagisce con un'IA e scopre la verità sull'incidente."
+      },
+      "description": {
+        "en": "Sci-fi narrative adventure with psychological elements, set on a damaged spaceship. The player is a volunteer in a human-machine experiment who solves puzzles, interacts with an AI and makes key choices while uncovering the truth about the accident.\n\nBuilt the tutorial (the opening section of the game), two of the four puzzle rooms that unlock the ending, and the ending itself. The main challenge was making this work compatible with the other programmer's, solved through regular meetings and by refactoring the code together. The main takeaway: agree on rules and system structure with the team at the start. A complete, playable game was delivered.",
+        "it": "Avventura narrativa fantascientifica con elementi psicologici, ambientata su un'astronave in avaria. Il giocatore è un volontario in un esperimento uomo-macchina che risolve enigmi, interagisce con un'IA e compie scelte decisive mentre scopre la verità sull'incidente.\n\nSviluppo del tutorial (la parte iniziale del gioco), di due delle quattro stanze enigma che sbloccano il finale e del finale stesso. La sfida principale è stata rendere il lavoro compatibile con quello dell'altro programmatore, risolta con riunioni periodiche e rifattorizzando il codice insieme. Lezione principale: stabilire fin dall'inizio regole e struttura dei sistemi con il team. Il risultato è un gioco completo e giocabile."
+      },
+      "duration": { "value": 2, "unit": "month" },
+      "team": { "type": "team", "size": 4 },
+      "focus": { "en": "Puzzles and game flow", "it": "Enigmi e flusso di gioco" },
+      "platform": "PC",
+      "tech": ["Unity", "C#", "HDRP", "GitHub"],
+      "media": {
+        "thumbnail": "assets/thumbnail/ProjectARK.png"
+      },
+      "links": [
+        { "kind": "view", "url": "https://ry4ntr.itch.io/project-ark" },
+        { "kind": "source", "url": "https://github.com/Ry4nTR/ProjectWork" }
+      ]
+    },
+
+    {
       "id": "stay-room",
       "category": "game",
       "title": "Stay Room",
       "kicker": { "en": "Game Jam project", "it": "Progetto Game Jam" },
       "status": "completed",
       "summary": {
-        "en": "A chaotic management game built in a 2-day Game Jam where players modify the rooms of a house in real time to satisfy the needs of visiting NPC tenants.",
-        "it": "Un caotico gioco gestionale sviluppato in una Game Jam di 2 giorni in cui i giocatori modificano le stanze di una casa in tempo reale per soddisfare i bisogni dei coinquilini NPC."
+        "en": "Management game built during a 2-day game jam. Players modify the rooms of a house in real time to meet the needs of visiting NPC tenants.",
+        "it": "Gioco gestionale sviluppato durante una game jam di 2 giorni. I giocatori modificano le stanze di una casa in tempo reale per soddisfare i bisogni dei coinquilini NPC."
+      },
+      "description": {
+        "en": "Management game built during a 2-day game jam, in a team of six. Players modify the rooms of a house in real time to meet the needs of visiting NPC tenants.\n\nProgrammer on the team. Built the NPC pathfinding system and the room-changing system. The main challenge was completing everything within the time limit of the jam and integrating the work of several people.",
+        "it": "Gioco gestionale sviluppato durante una game jam di 2 giorni, in un team di sei persone. I giocatori modificano le stanze di una casa in tempo reale per soddisfare i bisogni dei coinquilini NPC.\n\nProgrammatore del team. Sviluppo del sistema di pathfinding degli NPC e del sistema di cambio delle stanze. La sfida principale è stata completare tutto entro i tempi della jam e integrare il lavoro di più persone."
       },
       "duration": { "value": 2, "unit": "day" },
       "team": { "type": "team", "size": 6 },
@@ -119,45 +162,22 @@
     },
 
     {
-      "id": "project-ark",
-      "category": "game",
-      "title": "Project ARK",
-      "kicker": { "en": "First group project", "it": "Primo progetto di gruppo" },
-      "status": "completed",
-      "summary": {
-        "en": "A sci-fi narrative adventure with psychological elements, set on a spaceship in distress. Solve puzzles, talk to a mysterious AI and uncover the truth about the accident.",
-        "it": "Un'avventura narrativa fantascientifica con elementi psicologici, ambientata su un'astronave in avaria. Risolvi enigmi, interagisci con una misteriosa IA e scopri la verità sull'incidente."
-      },
-      "description": {
-        "en": "A sci-fi narrative adventure with psychological elements set on a spaceship in distress. The player is a volunteer in a human-machine experiment who must solve puzzles, interact with a mysterious AI, and make crucial choices as they uncover the truth about the accident on board.",
-        "it": "Un'avventura narrativa fantascientifica con elementi psicologici ambientata su un'astronave in avaria. Il giocatore è un volontario in un esperimento uomo-macchina che deve risolvere enigmi, interagire con una misteriosa IA e fare scelte cruciali mentre scopre la verità sull'incidente a bordo."
-      },
-      "duration": { "value": 2, "unit": "month" },
-      "team": { "type": "team", "size": 4 },
-      "focus": { "en": "HDRP project", "it": "Progetto HDRP" },
-      "platform": "PC",
-      "tech": ["Unity", "C#", "HDRP", "GitHub"],
-      "media": {
-        "thumbnail": "assets/thumbnail/ProjectARK.png"
-      },
-      "links": [
-        { "kind": "view", "url": "https://ry4ntr.itch.io/project-ark" },
-        { "kind": "source", "url": "https://github.com/Ry4nTR/ProjectWork" }
-      ]
-    },
-
-    {
       "id": "la-scatola-del-nonno",
       "category": "game",
       "title": "La scatola del nonno",
       "kicker": { "en": "First project", "it": "Primo progetto" },
       "status": "completed",
       "summary": {
-        "en": "A narrative adventure about childhood and memory, set in post-war Italy. Through the grandfather’s objects, the player gradually discovers the weight of war behind the stories of an old veteran.",
-        "it": "Un'avventura narrativa sull'infanzia e la memoria, ambientata nell'Italia del dopoguerra. Attraverso gli oggetti del nonno, il giocatore scopre gradualmente il peso della guerra dietro i racconti di un vecchio veterano."
+        "en": "Short narrative adventure about childhood and memory, set in post-war Italy. The player explores a grandfather's objects and the war stories connected to them.",
+        "it": "Breve avventura narrativa su infanzia e memoria, ambientata nell'Italia del dopoguerra. Il giocatore esplora gli oggetti di un nonno e i racconti di guerra ad essi legati."
+      },
+      "description": {
+        "en": "Short narrative adventure about childhood and memory, set in post-war Italy. The player explores a grandfather's objects and the war stories connected to them.\n\nSolo project: the whole game was built from scratch in three weeks. The main challenge was the dialogue system, which had to stay easy to read and to advance during play. Identified improvements: more polish and a stricter dialogue structure.",
+        "it": "Breve avventura narrativa su infanzia e memoria, ambientata nell'Italia del dopoguerra. Il giocatore esplora gli oggetti di un nonno e i racconti di guerra ad essi legati.\n\nProgetto individuale: l'intero gioco è stato sviluppato da zero in tre settimane. La sfida principale è stata il sistema di dialoghi, che doveva restare facile da leggere e da far scorrere durante il gioco. Miglioramenti individuati: maggiore rifinitura e una struttura dei dialoghi più rigida."
       },
       "duration": { "value": 3, "unit": "week" },
       "team": { "type": "solo" },
+      "focus": { "en": "Dialogue system", "it": "Sistema di dialoghi" },
       "platform": "PC",
       "tech": ["Unity", "C#"],
       "media": {
@@ -167,6 +187,23 @@
         { "kind": "view", "url": "https://ry4ntr.itch.io/la-scatola-del-nonno" },
         { "kind": "source", "url": "https://github.com/Ry4nTR/La-scatola-del-nonno" }
       ]
+    },
+
+    {
+      "id": "final-fps",
+      "category": "game",
+      "title": "FinalFPS",
+      "kicker": { "en": "Personal project", "it": "Progetto personale" },
+      "status": "in-progress",
+      "summary": {
+        "en": "Personal first-person shooter in Unreal Engine, developed independently in free time to test the engine and build a complete FPS.",
+        "it": "Sparatutto in prima persona personale in Unreal Engine, sviluppato in autonomia nel tempo libero per sperimentare con il motore e costruire un FPS completo."
+      },
+      "team": { "type": "solo" },
+      "focus": { "en": "Unreal Engine, FPS gameplay", "it": "Unreal Engine, gameplay FPS" },
+      "platform": "PC",
+      "tech": ["Unreal Engine"],
+      "links": []
     }
   ]
 }

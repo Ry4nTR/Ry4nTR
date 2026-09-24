@@ -1,8 +1,9 @@
 import { qs, el, icon, clear } from '../core/dom.js';
-import { EVENTS } from '../config.js';
+import { EVENTS, TIMING } from '../config.js';
 import { on } from '../core/events.js';
 import { t, localize, onLanguageChange } from '../i18n/i18n.js';
 import { createTabs } from '../components/tabs.js';
+import { createTypeIn } from '../effects/typing.js';
 import { createProjectCard } from './project-card.js';
 import { openProjectDetails } from './project-details.js';
 
@@ -26,11 +27,14 @@ export function initProjects({ categories, projects }) {
   /** category: 'all' or a category id. tech: null or { label, match: Set of normalised names } */
   const state = { category: 'all', tech: null };
 
+  // The line under the tabs types itself in when another category is picked
+  const description = createTypeIn(descriptionElement, { speed: TIMING.descriptionType });
+
   const tabs = createTabs(tabsElement, {
     panelId: 'projects-grid',
     onSelect: (id) => {
       state.category = id;
-      renderDescription();
+      renderDescription(true);
       renderGrid();
     },
   });
@@ -58,9 +62,9 @@ export function initProjects({ categories, projects }) {
     );
   }
 
-  function renderDescription() {
+  function renderDescription(animate = false) {
     const category = categories.find((item) => item.id === state.category);
-    descriptionElement.textContent = category ? localize(category.description) : t('projects.allDescription');
+    description.set(category ? localize(category.description) : t('projects.allDescription'), animate);
   }
 
   function renderFilter() {

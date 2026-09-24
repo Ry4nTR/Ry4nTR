@@ -5,7 +5,7 @@
    ========================================= */
 .form {
   display: grid;
-  gap: 22px;
+  gap: 1.375rem;
   text-align: left;
 }
 
@@ -16,7 +16,7 @@
 .form__field input,
 .form__field textarea {
   width: 100%;
-  padding: 26px 20px 10px;
+  padding: 1.625rem 1.25rem 0.625rem;
   background: var(--surface);
   border: 2px solid var(--accent-20);
   border-radius: var(--radius-sm);
@@ -27,20 +27,20 @@
 }
 
 .form__field textarea {
-  min-height: 150px;
+  min-height: 9.375rem;
 }
 
 .form__field input:focus,
 .form__field textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 20px var(--accent-20);
+  box-shadow: 0 0 1.25rem var(--accent-20);
 }
 
 .form__field label {
   position: absolute;
-  top: 17px;
-  left: 22px;
+  top: 1.0625rem;
+  left: 1.375rem;
   color: var(--text-faint);
   pointer-events: none;
   transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
@@ -50,14 +50,14 @@
 .form__field input:not(:placeholder-shown) + label,
 .form__field textarea:focus + label,
 .form__field textarea:not(:placeholder-shown) + label {
-  top: 8px;
+  top: 0.5rem;
   color: var(--accent-light);
   font-size: 0.75rem;
 }
 
 .form__submit {
   justify-self: center;
-  min-width: 190px;
+  min-width: 11.875rem;
 }
 
 .form__status {

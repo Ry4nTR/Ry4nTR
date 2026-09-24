@@ -7,11 +7,11 @@
     <meta name="theme-color" content="#1a1a1f">
 
     <!-- Static fallbacks: replaced at runtime with the values in locales/*.json -->
-    <title>Rostyslav Terletskyy — Programmer</title>
-    <meta name="description" content="Portfolio of Rostyslav Terletskyy, a junior programmer working across game development and web development.">
+    <title>Rostyslav Terletskyy — Software Developer</title>
+    <meta name="description" content="Portfolio of Rostyslav Terletskyy, junior software developer with experience in web development (TypeScript, Three.js) and game programming (Unity, Unreal Engine).">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Rostyslav Terletskyy — Programmer">
-    <meta property="og:description" content="Portfolio of Rostyslav Terletskyy, a junior programmer working across game development and web development.">
+    <meta property="og:title" content="Rostyslav Terletskyy — Software Developer">
+    <meta property="og:description" content="Portfolio of Rostyslav Terletskyy, junior software developer with experience in web development (TypeScript, Three.js) and game programming (Unity, Unreal Engine).">
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1a1f'/%3E%3Cpath d='M24 20 12 32l12 12M40 20l12 12-12 12' fill='none' stroke='%23a855f7' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
@@ -116,11 +116,27 @@
                         <p class="about-lead" data-i18n="about.lead"></p>
                         <p data-i18n="about.p1"></p>
                         <p data-i18n="about.p2"></p>
+                        <p data-i18n="about.p3"></p>
 
-                        <div class="about-fact">
-                            <i class="fa-solid fa-language" aria-hidden="true"></i>
-                            <span><strong data-i18n="about.languagesLabel"></strong> <span data-i18n="about.languages"></span></span>
-                        </div>
+                        <!-- Quick facts for recruiters: texts are in locales/*.json (about.*) -->
+                        <ul class="about-facts">
+                            <li class="about-fact">
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                <span><strong data-i18n="about.availabilityLabel"></strong> <span data-i18n="about.availability"></span></span>
+                            </li>
+                            <li class="about-fact">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <span><strong data-i18n="about.locationLabel"></strong> <span data-i18n="about.location"></span></span>
+                            </li>
+                            <li class="about-fact">
+                                <i class="fa-solid fa-language" aria-hidden="true"></i>
+                                <span><strong data-i18n="about.languagesLabel"></strong> <span data-i18n="about.languages"></span></span>
+                            </li>
+                            <li class="about-fact">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                                <span><strong data-i18n="about.interestsLabel"></strong> <span data-i18n="about.interests"></span></span>
+                            </li>
+                        </ul>
                     </div>
 
                     <aside class="about-journey reveal">
@@ -185,6 +201,9 @@
 
                 <div class="contact__content reveal">
                     <p class="contact__text" data-i18n="contact.description"></p>
+
+                    <!-- Built from the entries of data/site.json -> social that have "contact": true -->
+                    <div class="contact__links" id="contact-links" hidden></div>
 
                     <!-- Field names (from_name, reply_to, message) match the EmailJS template variables -->
                     <form id="contact-form" class="form">

@@ -1,3 +1,5 @@
+import { el } from '../core/dom.js';
+
 /**
  * Typewriter effect.
  *
@@ -66,6 +68,52 @@ export function createTypewriter(target, { type = 100, erase = 50, hold = 2000, 
     stop() {
       running = false;
       clearTimeout(timer);
+    },
+  };
+}
+
+/**
+ * One-shot "type-in": writes a text into `target`, and can type it out character by character.
+ * Unlike the typewriter above it does not loop or erase: it is meant for a line that changes
+ * when the person does something (for example, picking another project category).
+ *
+ *   const line = createTypeIn(element, { speed: 18 });   // speed = ms per character, 0 turns the effect off
+ *   line.set('New text', true);                          // true = type it out, false = show it at once
+ *
+ * The text is first written in an invisible copy that holds the final size, so the layout never
+ * jumps while the visible copy is still typing. With "reduce motion" enabled the text just appears.
+ */
+export function createTypeIn(target, { speed = 18 } = {}) {
+  const reduceMotion = Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches);
+  let timer = null;
+
+  target.classList.add('type-in');
+
+  return {
+    set(text, animate = false) {
+      clearTimeout(timer);
+
+      const live = el('span', { class: 'type-in__live' });
+
+      if (!animate || reduceMotion || speed <= 0) {
+        live.textContent = text;
+        target.replaceChildren(live);
+        return;
+      }
+
+      const ghost = el('span', { class: 'type-in__ghost', 'aria-hidden': 'true', text });
+      target.replaceChildren(ghost, live);
+      live.classList.add('is-typing');
+
+      let count = 0;
+      const step = () => {
+        count += 1;
+        live.textContent = text.slice(0, count);
+
+        if (count < text.length) timer = setTimeout(step, speed);
+        else live.classList.remove('is-typing');
+      };
+      timer = setTimeout(step, speed);
     },
   };
 }

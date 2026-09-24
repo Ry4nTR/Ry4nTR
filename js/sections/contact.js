@@ -1,12 +1,15 @@
-import { qs } from '../core/dom.js';
+import { qs, el, icon } from '../core/dom.js';
 import { EMAILJS, TIMING } from '../config.js';
 import { t } from '../i18n/i18n.js';
 
 /**
- * Contact form. Sends the form through EmailJS (SDK loaded in index.html).
+ * Contact section: direct links + the form.
+ * The form is sent through EmailJS (SDK loaded in index.html).
  * Field names (from_name, reply_to, message) must match the EmailJS template variables.
  */
-export function initContact() {
+export function initContact(site = {}) {
+  initDirectLinks(site.social ?? []);
+
   const form = qs('#contact-form');
   if (!form) return;
 
@@ -54,4 +57,30 @@ export function initContact() {
       setSending(false);
     }
   });
+}
+
+/** Direct links above the form: the entries of data/site.json -> social that have "contact": true. */
+function initDirectLinks(links) {
+  const root = qs('#contact-links');
+  if (!root) return;
+
+  links
+    .filter((link) => link.contact)
+    .forEach((link) => {
+      const isMail = link.url.startsWith('mailto:');
+      root.append(
+        el(
+          'a',
+          {
+            class: 'btn btn--outline btn--small',
+            href: link.url,
+            target: isMail ? null : '_blank',
+            rel: isMail ? null : 'noopener noreferrer',
+          },
+          [icon(link.icon), el('span', { text: link.display ?? link.label })],
+        ),
+      );
+    });
+
+  root.hidden = !root.children.length;
 }

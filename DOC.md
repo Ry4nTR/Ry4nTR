@@ -31,7 +31,7 @@ css/
   layout/               container, navbar, footer
   components/           buttons, dropdown, chips, tabs, timeline, modal, form, project card/details
   sections/             hero, about, skills, projects, contact
-  effects/              particles
+  effects/              particles, type-in (the line that types itself under the project tabs)
 js/
   main.js               Entry point: loads data + translations, starts every module
   config.js             Paths, EmailJS ids, timings
@@ -56,7 +56,7 @@ and `summary` are required; anything you leave out is simply not shown.
 | `kicker` | Short label above the title, e.g. `{ "en": "Multiplayer FPS", "it": "FPS multigiocatore" }` |
 | `status` | `in-progress`, `mvp` or `completed` (leave it out for no badge) |
 | `summary` | Short text shown on the card (2 to 3 lines fit) |
-| `description` | Long text shown in the details window (falls back to `summary`) |
+| `description` | Long text shown in the details window (falls back to `summary`). A blank line (`\n\n`) starts a new paragraph |
 | `duration` | `{ "value": 3, "unit": "month" }`, unit is `day`, `week`, `month` or `year` |
 | `team` | `{ "type": "solo" }` or `{ "type": "team", "size": 4 }` |
 | `focus` | Free label, e.g. "AI programming" |
@@ -75,7 +75,7 @@ Add an object to `"categories"` in `data/projects.json` (`id`, `icon`, `label`, 
 ### Add or change a skill
 Edit `data/skills.json`. To make an item count the projects that use it, its `name` (or one of its
 `aliases`) must match a name in the projects' `tech` list. A group with `"showProjectCount": false`
-never shows counters. Want an IDE group? Add one:
+never shows counters or filters (the Areas of Work and Tools groups use it). Want an IDE group? Add one:
 
 ```json
 { "id": "ides", "icon": "fa-solid fa-terminal",
@@ -94,6 +94,15 @@ never shows counters. Want an IDE group? Add one:
 Everything visible is in `locales/en.json` and `locales/it.json` (hero titles that type out under your name are
 `hero.titles`). The name in the `<h1>` is the only text written directly in `index.html`.
 
+### Add or change a social / contact link
+Edit `social` in `data/site.json`. Every entry shows as an icon button in the hero. Entries with `"contact": true` are
+also shown as buttons above the contact form (`display` is the text shown instead of `label`, useful for an e-mail
+address). A `url` starting with `mailto:` opens the mail app instead of a new tab.
+
+### Change the quick facts in About
+Availability, location, languages and interests are the four `<li class="about-fact">` rows in `index.html`;
+their texts are `about.availability`, `about.location`, `about.languages` and `about.interests` in the locale files.
+
 ### Add a CV
 Drop the PDF in `assets/cv/` and add an entry to `resumes` in `data/site.json`.
 
@@ -102,6 +111,18 @@ Add an object to `data/timeline.json`. Dates are `"YYYY-MM"` or `"YYYY"`; `"end"
 
 ### Change colors
 `css/base/tokens.css` is the only place colors are defined.
+
+### Change sizes (and support bigger screens)
+Everything is sized in `rem`, so the whole page scales from one value: the root font size in `css/base/reset.css`.
+It stays at the browser default (16px) up to a 1920x1080 window and grows on 2K, 4K and ultrawide screens, so the
+layout keeps the same proportions there. `--container-width`, `--gutter` and `--section-space` in `css/base/tokens.css`
+control how wide the content is and how much space sits around sections. When you write new CSS, use `rem`
+(pixels are only kept for 1 to 3px borders and for media query breakpoints).
+
+### Typing effects
+- Hero titles: `createTypewriter` in `js/effects/typing.js` (types, holds, erases, loops). Texts are `hero.titles` in the locale files.
+- Text under the project tabs: `createTypeIn` in the same file. It types the new text once when a category is picked.
+  Speed is `TIMING.descriptionType` in `js/config.js` (milliseconds per character, `0` turns it off).
 
 ## Files the site expects in `assets/`
 

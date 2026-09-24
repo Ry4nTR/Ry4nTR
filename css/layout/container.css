@@ -4,21 +4,22 @@
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--gutter);
 }
 
 section {
   position: relative;
   z-index: var(--z-content);
-  padding: 100px 0;
+  padding: var(--section-space) 0;
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 15px;
+    padding: 0 0.9375rem;
   }
 
   section {
-    padding: 60px 0;
+    padding: 3.75rem 0;
+    scroll-margin-top: var(--nav-height); /* titles stay clear of the fixed navbar */
   }
 }
